@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Python学习笔记3 - Tom&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Python学习笔记3" />
+<meta property="og:description" content="面向对象 基本概念Python中的类提供了面向对象编程的所有基本功能：类的继承机制允许多个基类，派生类可以覆盖基类中的任何方法，方法中可以调用基类中的同名方法。 对象可以包含任意数量和类型的数据。 OOP：属性(Property)和方法(Method)。 类（Class）和实例（Instance）
+class Student(object): def __init__(self, name, score): self.name = name self.score = score #!/usr/bin/python3 class MyClass: &#34;&#34;&#34;一个简单的类实例&#34;&#34;&#34; i = 12345 def f(self): return &#39;hello world&#39; # 实例化类 x = MyClass() # 访问类的属性和方法 print(&#34;MyClass 类的属性 i 为：&#34;, x.i) print(&#34;MyClass 类的方法 f 输出为：&#34;, x.f()) ##访问控制
+class Student(object): ... def get_name(self): return self.__name def get_score(self): return self.__score 需要注意的是，在Python中，变量名类似__xxx__的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的，不是private变量，所以，不能用__name__、__score__这样的变量名。
+有些时候，你会看到以一个下划线开头的实例变量名，比如_name，这样的实例变量外部是可以访问的，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。
+继承和多态动态语言的“鸭子类型”，它并不要求严格的继承体系，一个对象只要“看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子
+获取对象信息###使用type()
+&gt;&gt;&gt; type(fn)==types.FunctionType True ###使用isinstance() ###使用dir() 类似__xxx__的属性和方法在Python中都是有特殊用途的，比如__len__方法返回长度。在Python中，如果你调用len()函数试图获取一个对象的长度，实际上，在len()函数内部，它自动去调用该对象的__len__()方法，所以，下面的代码是等价的：
+&gt;&gt;&gt; len(&#39;ABC&#39;) 3 &gt;&gt;&gt; &#39;ABC&#39;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/tech/python/python-note3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-01-17T22:05:50+00:00" />
+<meta property="article:modified_time" content="2017-01-17T22:05:50+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python学习笔记3"/>
+<meta name="twitter:description" content="面向对象 基本概念Python中的类提供了面向对象编程的所有基本功能：类的继承机制允许多个基类，派生类可以覆盖基类中的任何方法，方法中可以调用基类中的同名方法。 对象可以包含任意数量和类型的数据。 OOP：属性(Property)和方法(Method)。 类（Class）和实例（Instance）
+class Student(object): def __init__(self, name, score): self.name = name self.score = score #!/usr/bin/python3 class MyClass: &#34;&#34;&#34;一个简单的类实例&#34;&#34;&#34; i = 12345 def f(self): return &#39;hello world&#39; # 实例化类 x = MyClass() # 访问类的属性和方法 print(&#34;MyClass 类的属性 i 为：&#34;, x.i) print(&#34;MyClass 类的方法 f 输出为：&#34;, x.f()) ##访问控制
+class Student(object): ... def get_name(self): return self.__name def get_score(self): return self.__score 需要注意的是，在Python中，变量名类似__xxx__的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的，不是private变量，所以，不能用__name__、__score__这样的变量名。
+有些时候，你会看到以一个下划线开头的实例变量名，比如_name，这样的实例变量外部是可以访问的，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。
+继承和多态动态语言的“鸭子类型”，它并不要求严格的继承体系，一个对象只要“看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子
+获取对象信息###使用type()
+&gt;&gt;&gt; type(fn)==types.FunctionType True ###使用isinstance() ###使用dir() 类似__xxx__的属性和方法在Python中都是有特殊用途的，比如__len__方法返回长度。在Python中，如果你调用len()函数试图获取一个对象的长度，实际上，在len()函数内部，它自动去调用该对象的__len__()方法，所以，下面的代码是等价的：
+&gt;&gt;&gt; len(&#39;ABC&#39;) 3 &gt;&gt;&gt; &#39;ABC&#39;."/>
+<meta name="application-name" content="Tom&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Tom&#39;s Blog">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/tech/python/python-note3/" /><link rel="prev" href="http://example.org/posts/misc/mp/" /><link rel="next" href="http://example.org/posts/tech/architecture/design-principles/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Python学习笔记3",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/tech\/python\/python-note3\/"
+        },"genre": "posts","keywords": "开发, Python","wordcount":  185 ,
+        "url": "http:\/\/example.org\/posts\/tech\/python\/python-note3\/","datePublished": "2017-01-17T22:05:50+00:00","dateModified": "2017-01-17T22:05:50+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Tom"},"author": {
+                "@type": "Person",
+                "name": "Tom"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="" header-mobile=""><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/tech/python/python-note3/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="#" onclick="return false;" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/posts/tech/python/python-note3/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Python学习笔记3</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-01-17">2017-01-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2017-01-17">2017-01-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;185 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="content" id="content"><p><a class="lightgallery" href="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png" title="Python" data-thumbnail="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png">
+        <img
+            
+            loading="lazy"
+            src="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png"
+            srcset="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png, http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png 1.5x, http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png 2x"
+            sizes="auto"
+            alt="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png">
+    </a></p>
+<h1 id="面向对象" class="headerLink">
+    <a href="#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1" class="header-mark"></a>面向对象</h1><h2 id="基本概念" class="headerLink">
+    <a href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" class="header-mark"></a>基本概念</h2><p>Python中的类提供了面向对象编程的所有基本功能：类的继承机制允许多个基类，派生类可以覆盖基类中的任何方法，方法中可以调用基类中的同名方法。
+对象可以包含任意数量和类型的数据。
+OOP：属性(Property)和方法(Method)。
+类（Class）和实例（Instance）</p>
+<pre tabindex="0"><code>class Student(object):
+
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+        #!/usr/bin/python3
+ 
+class MyClass:
+    &#34;&#34;&#34;一个简单的类实例&#34;&#34;&#34;
+    i = 12345
+    def f(self):
+        return &#39;hello world&#39;
+ 
+# 实例化类
+x = MyClass()
+ 
+# 访问类的属性和方法
+print(&#34;MyClass 类的属性 i 为：&#34;, x.i)
+print(&#34;MyClass 类的方法 f 输出为：&#34;, x.f())
+</code></pre><p>##访问控制</p>
+<pre tabindex="0"><code>class Student(object):
+    ...
+
+    def get_name(self):
+        return self.__name
+
+    def get_score(self):
+        return self.__score
+</code></pre><p>需要注意的是，在Python中，变量名类似__xxx__的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的，不是private变量，所以，不能用__name__、__score__这样的变量名。</p>
+<p>有些时候，你会看到以一个下划线开头的实例变量名，比如_name，这样的实例变量外部是可以访问的，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。</p>
+<h2 id="继承和多态" class="headerLink">
+    <a href="#%e7%bb%a7%e6%89%bf%e5%92%8c%e5%a4%9a%e6%80%81" class="header-mark"></a>继承和多态</h2><p>动态语言的“鸭子类型”，它并不要求严格的继承体系，一个对象只要“看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子</p>
+<h2 id="获取对象信息" class="headerLink">
+    <a href="#%e8%8e%b7%e5%8f%96%e5%af%b9%e8%b1%a1%e4%bf%a1%e6%81%af" class="header-mark"></a>获取对象信息</h2><p>###使用type()</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; type(fn)==types.FunctionType
+True
+</code></pre><p>###使用isinstance()
+###使用dir()
+类似__xxx__的属性和方法在Python中都是有特殊用途的，比如__len__方法返回长度。在Python中，如果你调用len()函数试图获取一个对象的长度，实际上，在len()函数内部，它自动去调用该对象的__len__()方法，所以，下面的代码是等价的：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; len(&#39;ABC&#39;)
+3
+&gt;&gt;&gt; &#39;ABC&#39;.__len__()
+3
+</code></pre><p>仅仅把属性和方法列出来是不够的，配合getattr()、setattr()以及hasattr()，我们可以直接操作一个对象的状态：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; class MyObject(object):
+...     def __init__(self):
+...         self.x = 9
+...     def power(self):
+...         return self.x * self.x
+...
+&gt;&gt;&gt; obj = MyObject()
+&gt;&gt;&gt; def readImage(fp):
+    if hasattr(fp, &#39;read&#39;):
+        return readData(fp)
+    return None
+</code></pre><p>###实例属性和类属性
+类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称, 按照惯例它的名称是 self。self 的名字并不是规定死的，也可以使用 this，但是最好还是按照约定是用 self</p>
+<h3 id="类的私有属性和私有方法" class="headerLink">
+    <a href="#%e7%b1%bb%e7%9a%84%e7%a7%81%e6%9c%89%e5%b1%9e%e6%80%a7%e5%92%8c%e7%a7%81%e6%9c%89%e6%96%b9%e6%b3%95" class="header-mark"></a>类的私有属性和私有方法</h3><h1 id="trouble-shooting" class="headerLink">
+    <a href="#trouble-shooting" class="header-mark"></a>trouble shooting</h1><h2 id="异常捕获" class="headerLink">
+    <a href="#%e5%bc%82%e5%b8%b8%e6%8d%95%e8%8e%b7" class="header-mark"></a>异常捕获</h2><p>Python的错误其实也是class，所有的错误类型都继承自BaseException</p>
+<pre tabindex="0"><code>try:
+    print(&#39;try...&#39;)
+    r = 10 / int(&#39;2&#39;)
+    print(&#39;result:&#39;, r)
+except ValueError as e:
+    print(&#39;ValueError:&#39;, e)
+except ZeroDivisionError as e:
+    print(&#39;ZeroDivisionError:&#39;, e)
+else:
+    print(&#39;no error!&#39;)
+finally:
+    print(&#39;finally...&#39;)
+print(&#39;END&#39;)
+</code></pre><h3 id="用户自定义异常" class="headerLink">
+    <a href="#%e7%94%a8%e6%88%b7%e8%87%aa%e5%ae%9a%e4%b9%89%e5%bc%82%e5%b8%b8" class="header-mark"></a>用户自定义异常</h3><pre tabindex="0"><code>&gt;&gt;&gt; class MyError(Exception):
+        def __init__(self, value):
+            self.value = value
+        def __str__(self):
+            return repr(self.value)
+</code></pre><h2 id="断言" class="headerLink">
+    <a href="#%e6%96%ad%e8%a8%80" class="header-mark"></a>断言</h2><pre tabindex="0"><code>assert n != 0, &#39;n is zero!&#39;
+</code></pre><h2 id="logging" class="headerLink">
+    <a href="#logging" class="header-mark"></a>logging</h2><pre tabindex="0"><code>import logging
+logging.basicConfig(level=logging.INFO)
+</code></pre><h2 id="pdb" class="headerLink">
+    <a href="#pdb" class="header-mark"></a>pdb</h2><p>pdb.set_trace() # 运行到这里会自动暂停</p>
+<h1 id="参考资料" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-mark"></a>参考资料</h1><h2 id="python-2x-vs-3x" class="headerLink">
+    <a href="#python-2x-vs-3x" class="header-mark"></a>Python 2.x vs 3.x</h2><p>2008年, Python3发布。最大的变化是源码文件默认使用utf-8编码</p>
+<ul>
+<li>更多区别：<a href="http://www.admin10000.com/document/144.html" target="_blank" rel="noopener noreferrer">Python3.x和Python2.x的区别</a></li>
+</ul>
+<h2 id="学习材料" class="headerLink">
+    <a href="#%e5%ad%a6%e4%b9%a0%e6%9d%90%e6%96%99" class="header-mark"></a>学习材料</h2><ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="noopener noreferrer">廖雪峰Python3教程</a></li>
+<li><a href="http://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="noopener noreferrer">Runoob Python3教程</a></li>
+<li><a href="http://www.phpxs.com/j/python" target="_blank" rel="noopener noreferrer">PHPXS Python基础教程</a></li>
+</ul>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2017-01-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%BC%80%E5%8F%91/">开发</a>,&nbsp;<a href="/tags/python/">Python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/misc/mp/" class="prev" rel="prev" title="微信公众号推荐"><i class="fas fa-angle-left fa-fw"></i>微信公众号推荐</a>
+            <a href="/posts/tech/architecture/design-principles/" class="next" rel="next" title="A000001 面向对象的设计原则">A000001 面向对象的设计原则<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.110.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false}};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Python学习笔记2 - Tom&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Python学习笔记2" />
+<meta property="og:description" content="函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段
+参数传递 传不可变对象实例：在 python 中，strings, tuples, 和 numbers 是不可更改的对象 传可变对象实例：而 list,dict 等则是可以修改的对象 参数类型 必需参数 关键字参数：使用关键字参数允许函数调用时参数的顺序与声明时不一致 默认参数 变长参数 递归函数 匿名函数lambda [arg1 [,arg2,&hellip;..argn]]:expression
+sum = lambda arg1, arg2: arg1 &#43; arg2; # 调用sum函数 print (&#34;相加后的值为 : &#34;, sum( 10, 20 )) print (&#34;相加后的值为 : &#34;, sum( 20, 20 )) 变量作用域变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称。Python的作用域一共有4中，分别是： L （Local） 局部作用域 E （Enclosing） 闭包函数外的函数中 G （Global） 全局作用域 B （Built-in） 内建作用域 以 L –&gt; E –&gt; G –&gt;B 的规则查找，即：在局部找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，再者去内建中找。 Python 中只有模块（module），类（class）以及函数（def、lambda）才会引入新的作用域，其它的代码块（如 if/elif/else/、try/except、for/while等）是不会引入新的作用域的，也就是说这这些语句内定义的变量，外部也可以访问" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/tech/python/python-note2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-06-05T22:05:50+00:00" />
+<meta property="article:modified_time" content="2016-06-05T22:05:50+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python学习笔记2"/>
+<meta name="twitter:description" content="函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段
+参数传递 传不可变对象实例：在 python 中，strings, tuples, 和 numbers 是不可更改的对象 传可变对象实例：而 list,dict 等则是可以修改的对象 参数类型 必需参数 关键字参数：使用关键字参数允许函数调用时参数的顺序与声明时不一致 默认参数 变长参数 递归函数 匿名函数lambda [arg1 [,arg2,&hellip;..argn]]:expression
+sum = lambda arg1, arg2: arg1 &#43; arg2; # 调用sum函数 print (&#34;相加后的值为 : &#34;, sum( 10, 20 )) print (&#34;相加后的值为 : &#34;, sum( 20, 20 )) 变量作用域变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称。Python的作用域一共有4中，分别是： L （Local） 局部作用域 E （Enclosing） 闭包函数外的函数中 G （Global） 全局作用域 B （Built-in） 内建作用域 以 L –&gt; E –&gt; G –&gt;B 的规则查找，即：在局部找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，再者去内建中找。 Python 中只有模块（module），类（class）以及函数（def、lambda）才会引入新的作用域，其它的代码块（如 if/elif/else/、try/except、for/while等）是不会引入新的作用域的，也就是说这这些语句内定义的变量，外部也可以访问"/>
+<meta name="application-name" content="Tom&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Tom&#39;s Blog">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/tech/python/python-note2/" /><link rel="prev" href="http://example.org/posts/tech/dev/code-simplicity/" /><link rel="next" href="http://example.org/posts/misc/mp/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Python学习笔记2",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/tech\/python\/python-note2\/"
+        },"genre": "posts","keywords": "开发, Python","wordcount":  345 ,
+        "url": "http:\/\/example.org\/posts\/tech\/python\/python-note2\/","datePublished": "2016-06-05T22:05:50+00:00","dateModified": "2016-06-05T22:05:50+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Tom"},"author": {
+                "@type": "Person",
+                "name": "Tom"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="" header-mobile=""><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/tech/python/python-note2/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="#" onclick="return false;" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/posts/tech/python/python-note2/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Python学习笔记2</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-06-05">2016-06-05</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2016-06-05">2016-06-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;345 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p><a class="lightgallery" href="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png" title="Python" data-thumbnail="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png">
+        <img
+            
+            loading="lazy"
+            src="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png"
+            srcset="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png, http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png 1.5x, http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png 2x"
+            sizes="auto"
+            alt="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png">
+    </a></p>
+<h1 id="函数" class="headerLink">
+    <a href="#%e5%87%bd%e6%95%b0" class="header-mark"></a>函数</h1><p>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段</p>
+<h2 id="参数传递" class="headerLink">
+    <a href="#%e5%8f%82%e6%95%b0%e4%bc%a0%e9%80%92" class="header-mark"></a>参数传递</h2><ul>
+<li>传不可变对象实例：在 python 中，strings, tuples, 和 numbers 是不可更改的对象</li>
+<li>传可变对象实例：而 list,dict 等则是可以修改的对象</li>
+</ul>
+<h2 id="参数类型" class="headerLink">
+    <a href="#%e5%8f%82%e6%95%b0%e7%b1%bb%e5%9e%8b" class="header-mark"></a>参数类型</h2><ul>
+<li>必需参数</li>
+<li>关键字参数：使用关键字参数允许函数调用时参数的顺序与声明时不一致</li>
+<li>默认参数</li>
+<li>变长参数</li>
+</ul>
+<h2 id="递归函数" class="headerLink">
+    <a href="#%e9%80%92%e5%bd%92%e5%87%bd%e6%95%b0" class="header-mark"></a>递归函数</h2><h2 id="匿名函数" class="headerLink">
+    <a href="#%e5%8c%bf%e5%90%8d%e5%87%bd%e6%95%b0" class="header-mark"></a>匿名函数</h2><p>lambda [arg1 [,arg2,&hellip;..argn]]:expression</p>
+<pre tabindex="0"><code>sum = lambda arg1, arg2: arg1 + arg2;
+ 
+# 调用sum函数
+print (&#34;相加后的值为 : &#34;, sum( 10, 20 ))
+print (&#34;相加后的值为 : &#34;, sum( 20, 20 ))
+</code></pre><h2 id="变量作用域" class="headerLink">
+    <a href="#%e5%8f%98%e9%87%8f%e4%bd%9c%e7%94%a8%e5%9f%9f" class="header-mark"></a>变量作用域</h2><p>变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称。Python的作用域一共有4中，分别是：
+L （Local） 局部作用域
+E （Enclosing） 闭包函数外的函数中
+G （Global） 全局作用域
+B （Built-in） 内建作用域
+以 L –&gt; E –&gt; G –&gt;B 的规则查找，即：在局部找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，再者去内建中找。
+Python 中只有模块（module），类（class）以及函数（def、lambda）才会引入新的作用域，其它的代码块（如 if/elif/else/、try/except、for/while等）是不会引入新的作用域的，也就是说这这些语句内定义的变量，外部也可以访问</p>
+<h3 id="global-和-nonlocal关键字" class="headerLink">
+    <a href="#global-%e5%92%8c-nonlocal%e5%85%b3%e9%94%ae%e5%ad%97" class="header-mark"></a>global 和 nonlocal关键字</h3><h1 id="高级特性" class="headerLink">
+    <a href="#%e9%ab%98%e7%ba%a7%e7%89%b9%e6%80%a7" class="header-mark"></a>高级特性</h1><h2 id="切片" class="headerLink">
+    <a href="#%e5%88%87%e7%89%87" class="header-mark"></a>切片</h2><p>list,tuple,string都适用。有了切片操作，很多地方循环就不再需要了</p>
+<pre tabindex="0"><code>L = list(range(100))
+L[:10]
+L[-10:]
+L[:10:2]
+(0, 1, 2, 3, 4, 5)[:3]
+&#39;ABCDEFG&#39;[::2]
+</code></pre><h2 id="迭代" class="headerLink">
+    <a href="#%e8%bf%ad%e4%bb%a3" class="header-mark"></a>迭代</h2><p>任何可迭代对象都可以作用于for循环，包括我们自定义的数据类型，只要符合迭代条件，就可以使用for循环</p>
+<pre tabindex="0"><code>for i, value in enumerate([&#39;A&#39;, &#39;B&#39;, &#39;C&#39;]):
+for x, y in [(1, 1), (2, 4), (3, 9)]:
+</code></pre><h2 id="列表生成式list-comprehensions" class="headerLink">
+    <a href="#%e5%88%97%e8%a1%a8%e7%94%9f%e6%88%90%e5%bc%8flist-comprehensions" class="header-mark"></a>列表生成式（List Comprehensions）</h2><pre tabindex="0"><code>&gt;&gt;&gt; list(range(1, 11))
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[x * x for x in range(1, 11) if x % 2 == 0]
+[m + n for m in &#39;ABC&#39; for n in &#39;XYZ&#39;]
+</code></pre><p>##生成器（generator）
+第一种方法很简单，只要把一个列表生成式的[]改成()，就创建了一个generator。
+第二种：yield关键字</p>
+<p>##迭代器
+凡是可作用于for循环的对象都是Iterable类型；</p>
+<p>凡是可作用于next()函数的对象都是Iterator类型，它们表示一个惰性计算的序列；迭代器有两个基本的方法：iter() 和 next()</p>
+<p>集合数据类型如list、dict、str等是Iterable但不是Iterator，不过可以通过iter()函数获得一个Iterator对象</p>
+<pre tabindex="0"><code># 首先获得Iterator对象:
+it = iter([1, 2, 3, 4, 5])
+# 循环:
+while True:
+    try:
+        # 获得下一个值:
+        x = next(it)
+    except StopIteration:
+        # 遇到StopIteration就退出循环
+        break
+</code></pre><h1 id="函数式编程" class="headerLink">
+    <a href="#%e5%87%bd%e6%95%b0%e5%bc%8f%e7%bc%96%e7%a8%8b" class="header-mark"></a>函数式编程</h1><p>函数式编程的一个特点就是，允许把函数本身作为参数传入另一个函数，还允许返回一个函数！</p>
+<p>Python对函数式编程提供部分支持。由于Python允许使用变量，因此，Python不是纯函数式编程语言</p>
+<h2 id="高阶函数" class="headerLink">
+    <a href="#%e9%ab%98%e9%98%b6%e5%87%bd%e6%95%b0" class="header-mark"></a>高阶函数</h2><p>把函数作为参数传入，这样的函数称为高阶函数，函数式编程就是指这种高度抽象的编程范式。
+###变量可以指向函数
+###函数名也是变量
+###传入函数</p>
+<h2 id="mapreduce" class="headerLink">
+    <a href="#mapreduce" class="header-mark"></a>map/reduce</h2><p>map()函数接收两个参数，一个是函数，一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator返回</p>
+<pre tabindex="0"><code>def f(x):
+    return x * x
+r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+list(r)
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+</code></pre><p>reduce把一个函数作用在一个序列[x1, x2, x3, &hellip;]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算，其效果就是：</p>
+<pre tabindex="0"><code>reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
+</code></pre><p>##filter
+和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是丢弃该元素</p>
+<pre tabindex="0"><code>def is_odd(n):
+    return n % 2 == 1
+
+list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15]))
+# 结果: [1, 5, 9, 15]
+</code></pre><p>##sorted
+sorted()函数也是一个高阶函数，它还可以接收一个key函数来实现自定义的排序，例如按绝对值大小排序：</p>
+<pre tabindex="0"><code>sorted([36, 5, -12, 9, -21], key=abs)
+[5, 9, -12, -21, 36]
+</code></pre><p>##返回函数
+一个函数可以返回一个计算结果，也可以返回一个函数。</p>
+<p>返回一个函数时，牢记该函数并未执行，返回函数中不要引用任何可能会变化的变量
+###函数作为返回值</p>
+<pre tabindex="0"><code>def lazy_sum(*args):
+    def sum():
+        ax = 0
+        for n in args:
+            ax = ax + n
+        return ax
+    return sum
+</code></pre><p>###闭包</p>
+<h2 id="装饰器" class="headerLink">
+    <a href="#%e8%a3%85%e9%a5%b0%e5%99%a8" class="header-mark"></a>装饰器</h2><h2 id="偏函数" class="headerLink">
+    <a href="#%e5%81%8f%e5%87%bd%e6%95%b0" class="header-mark"></a>偏函数</h2><pre tabindex="0"><code>&gt;&gt;&gt; import functools
+&gt;&gt;&gt; int2 = functools.partial(int, base=2)
+&gt;&gt;&gt; int2(&#39;1000000&#39;)
+64
+&gt;&gt;&gt; int2(&#39;1010101&#39;)
+85
+</code></pre><h1 id="模块" class="headerLink">
+    <a href="#%e6%a8%a1%e5%9d%97" class="header-mark"></a>模块</h1><p>一个.py文件就称之为一个模块（Module）
+为了避免模块名冲突，Python又引入了按目录来组织模块的方法，称为包（Package）
+##作用域
+有的函数和变量我们希望仅仅在模块内部使用。在Python中，是通过_前缀来实现的
+__name__属性</p>
+<pre tabindex="0"><code>#!/usr/bin/python3
+# Filename: using_name.py
+
+if __name__ == &#39;__main__&#39;:
+   print(&#39;程序自身在运行&#39;)
+else:
+   print(&#39;我来自另一模块&#39;)
+</code></pre><p>#三方模块</p>
+<h2 id="安装" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85" class="header-mark"></a>安装</h2><p>pip install Pillow</p>
+<h3 id="导入" class="headerLink">
+    <a href="#%e5%af%bc%e5%85%a5" class="header-mark"></a>导入</h3><p>import x.y.z
+from x.y import z/*</p>
+<h1 id="参考资料" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-mark"></a>参考资料</h1><h2 id="python-2x-vs-3x" class="headerLink">
+    <a href="#python-2x-vs-3x" class="header-mark"></a>Python 2.x vs 3.x</h2><p>2008年, Python3发布。最大的变化是源码文件默认使用utf-8编码</p>
+<ul>
+<li>更多区别：<a href="http://www.admin10000.com/document/144.html" target="_blank" rel="noopener noreferrer">Python3.x和Python2.x的区别</a></li>
+</ul>
+<h2 id="学习材料" class="headerLink">
+    <a href="#%e5%ad%a6%e4%b9%a0%e6%9d%90%e6%96%99" class="header-mark"></a>学习材料</h2><ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="noopener noreferrer">廖雪峰Python3教程</a></li>
+<li><a href="http://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="noopener noreferrer">Runoob Python3教程</a></li>
+<li><a href="http://www.phpxs.com/j/python" target="_blank" rel="noopener noreferrer">PHPXS Python基础教程</a></li>
+</ul>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2016-06-05</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%BC%80%E5%8F%91/">开发</a>,&nbsp;<a href="/tags/python/">Python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/tech/dev/code-simplicity/" class="prev" rel="prev" title="简约之美：软件设计之道"><i class="fas fa-angle-left fa-fw"></i>简约之美：软件设计之道</a>
+            <a href="/posts/misc/mp/" class="next" rel="next" title="微信公众号推荐">微信公众号推荐<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.110.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false}};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>开发 - Tag - Tom&#39;s Blog</title>
+        <link>http://example.org/tags/%E5%BC%80%E5%8F%91/</link>
+        <description>开发 - Tag - Tom&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/%E5%BC%80%E5%8F%91/" rel="self" type="application/rss+xml" /><item>
+    <title>Python学习笔记3</title>
+    <link>http://example.org/posts/tech/python/python-note3/</link>
+    <pubDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/posts/tech/python/python-note3/</guid>
+    <description><![CDATA[面向对象 基本概念Python中的类提供了面向对象编程的所有基本功能：类的继承机制允许多个基类，派生类可以覆盖基类中的任何方法，方法中可以调用基类中的同名方法。 对象可以包含任意数量和类型的数据。 OOP：属性(Property)和方法(Method)。 类（Class）和实例（Instance）
+class Student(object): def __init__(self, name, score): self.name = name self.score = score #!/usr/bin/python3 class MyClass: &#34;&#34;&#34;一个简单的类实例&#34;&#34;&#34; i = 12345 def f(self): return &#39;hello world&#39; # 实例化类 x = MyClass() # 访问类的属性和方法 print(&#34;MyClass 类的属性 i 为：&#34;, x.i) print(&#34;MyClass 类的方法 f 输出为：&#34;, x.f()) ##访问控制
+class Student(object): ... def get_name(self): return self.__name def get_score(self): return self.__score 需要注意的是，在Python中，变量名类似__xxx__的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的，不是private变量，所以，不能用__name__、__score__这样的变量名。
+有些时候，你会看到以一个下划线开头的实例变量名，比如_name，这样的实例变量外部是可以访问的，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。
+继承和多态动态语言的“鸭子类型”，它并不要求严格的继承体系，一个对象只要“看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子
+获取对象信息###使用type()
+&gt;&gt;&gt; type(fn)==types.FunctionType True ###使用isinstance() ###使用dir() 类似__xxx__的属性和方法在Python中都是有特殊用途的，比如__len__方法返回长度。在Python中，如果你调用len()函数试图获取一个对象的长度，实际上，在len()函数内部，它自动去调用该对象的__len__()方法，所以，下面的代码是等价的：
+&gt;&gt;&gt; len(&#39;ABC&#39;) 3 &gt;&gt;&gt; &#39;ABC&#39;.]]></description>
+</item><item>
+    <title>Python学习笔记2</title>
+    <link>http://example.org/posts/tech/python/python-note2/</link>
+    <pubDate>Sun, 05 Jun 2016 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/posts/tech/python/python-note2/</guid>
+    <description><![CDATA[函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段
+参数传递 传不可变对象实例：在 python 中，strings, tuples, 和 numbers 是不可更改的对象 传可变对象实例：而 list,dict 等则是可以修改的对象 参数类型 必需参数 关键字参数：使用关键字参数允许函数调用时参数的顺序与声明时不一致 默认参数 变长参数 递归函数 匿名函数lambda [arg1 [,arg2,&hellip;..argn]]:expression
+sum = lambda arg1, arg2: arg1 + arg2; # 调用sum函数 print (&#34;相加后的值为 : &#34;, sum( 10, 20 )) print (&#34;相加后的值为 : &#34;, sum( 20, 20 )) 变量作用域变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称。Python的作用域一共有4中，分别是： L （Local） 局部作用域 E （Enclosing） 闭包函数外的函数中 G （Global） 全局作用域 B （Built-in） 内建作用域 以 L –&gt; E –&gt; G –&gt;B 的规则查找，即：在局部找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，再者去内建中找。 Python 中只有模块（module），类（class）以及函数（def、lambda）才会引入新的作用域，其它的代码块（如 if/elif/else/、try/except、for/while等）是不会引入新的作用域的，也就是说这这些语句内定义的变量，外部也可以访问]]></description>
+</item><item>
+    <title>Python学习笔记1</title>
+    <link>http://example.org/posts/tech/python/python-note1/</link>
+    <pubDate>Sun, 17 Jan 2016 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/posts/tech/python/python-note1/</guid>
+    <description><![CDATA[Python入门 Python简介脚本语言。解释语言。动态语言。默认的解释器CPython。 Python之父—荷兰人Guido van Rossum。诞生于1989年。第一个公开发行版发行于1991年
+Python用途 是网络应用，包括网站、后台服务等等； 其次是许多日常需要的小工具，包括系统管理员需要的脚本任务等等； 另外就是把其他语言开发的程序再包装起来，方便使用 目前广泛应用于大数据和人工智能领域 Python优缺点 性能差 源码不能加密 第一个Python程序print(&#39;hello,world&#39;) 编程方式 交互式 脚本式Python式和Shell式
+基础语法 基本特点 大小写敏感 缩进（4个空格）而不是括号 注释：单行#，多行：&lsquo;&lsquo;&lsquo;或者&quot;&quot;&quot; input()和print() 数据类型 整数在整数除法中，除法（/）总是返回一个浮点数。，如果只想得到整数的结果，丢弃可能的分数部分，可以使用运算符//，称为地板除
+浮点数 字符串 Python中的字符串不能改变。在Python3中，所有的字符串都是Unicode字符串 字符串是以单引号&rsquo;或双引号&quot;括起来的任意文本，比如&rsquo;abc&rsquo;，&ldquo;xyz&rdquo;。多行字符串&rsquo;&lsquo;&lsquo;或&quot;&quot;&quot;) 默认不转义。转义：\ 不转义/自然字符串：通过在字符串前加r或R 反斜杠()可以作为续行符，表示下一行是上一行的延续。也可以使用 &ldquo;&rdquo;&quot;&hellip;&quot;&quot;&quot; 或者 &lsquo;&rsquo;&rsquo;&hellip;&rsquo;&rsquo;&rsquo; 跨越多行 字符串可以用+运算符连接在一起，用*运算符重复 Python中的字符串有两种索引方式，从左往右以0开始，从右往左以-1开始 str = &#39;Runoob&#39; print (str) # 输出字符串 print (str[0:-1]) # 输出第一个到倒数第二个的所有字符 print (str[0]) # 输出字符串第一个字符 print (str[2:5]) # 输出从第三个开始到第五个的字符 print (str[2:]) # 输出从第三个开始的后的所有字符 print (str * 2) # 输出字符串两次 print (str + &#34;TEST&#34;) # 连接字符串 List List（列表）是 Python 中使用最频繁的数据类型 列表是写在方括号([])之间、用逗号分隔开的元素列表 list是一种有序的集合，列表中的元素是可以改变的 列表中元素的类型可以不相同，它支持数字，字符串甚至可以包含列表（所谓嵌套） 支持append,pop,insert list = [ &#39;abcd&#39;, 786 , 2.]]></description>
+</item></channel>
+</rss>

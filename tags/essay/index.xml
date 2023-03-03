@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>essay - Tag - Tom&#39;s Blog</title>
+        <link>http://example.org/tags/essay/</link>
+        <description>essay - Tag - Tom&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Apr 2015 00:05:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/essay/" rel="self" type="application/rss+xml" /><item>
+    <title>做现实的理想主义者</title>
+    <link>http://example.org/posts/essay/realistic-idealist/</link>
+    <pubDate>Mon, 20 Apr 2015 00:05:00 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/posts/essay/realistic-idealist/</guid>
+    <description><![CDATA[&mdash; 节选自做现实的理想主义者
+世界不属于理想主义者，因为他们懦弱，没有勇气面对真相;
+世界也不属于现实主义者，因为他们只是在重复别人的生活。
+世界属于我们这样的现实的理想主义者。因为他们深深的知道，梦想越纯粹，手段就越要现实。
+世界越不看好你，你就要越看好自己。环境越冷清，我们就越要笑得怒力！我们就是这样改变世界！]]></description>
+</item></channel>
+</rss>

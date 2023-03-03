@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>influence - Tag - Tom&#39;s Blog</title>
+        <link>http://example.org/tags/influence/</link>
+        <description>influence - Tag - Tom&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Jan 2016 17:42:22 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/influence/" rel="self" type="application/rss+xml" /><item>
+    <title>打造个人品牌</title>
+    <link>http://example.org/posts/influence/personal-brand/</link>
+    <pubDate>Sun, 17 Jan 2016 17:42:22 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/posts/influence/personal-brand/</guid>
+    <description><![CDATA[ 摘要最近几年，“个人品牌”、“个人影响力”逐渐被人提及。然而他们真的那么重要吗？我们又应该如何打造呢？
+正文首先是一篇泼冷水的文章，发人深省，引以为戒。
+打造个人品牌的重要性被高估了
+其中的摘要，清晰直白地表达了该文作者的观点：
+关键在于先干出成绩，然后再打造个人品牌，否则就是本末倒置。然而，许多创业者把时间都花在面子工程上，结果盛名之下，其实难副。
+不过，虽然如此，其他几篇文章中介绍的方法仍然有参考价值。罗列如下。
+『1024』这个程序员节，聊聊程序员的自我进阶 听课总结：打造个人品牌的九个要点
+如何提高影响力，为自己代言
+打造你自己的程序员品牌
+程序员如何打造个人品牌
+程序员如何经营个人品牌
+总结下来，有以下几点。
+应该先干出一定成绩，然后再打造个人品牌，至少不应该急于求成 最好在各个网络平台用同一个ID标示自己。（这个有时候也比较难） 主要途径： 写博客（包括微博、传统博客、微信公众号等） 写书、做视频、办公开课 做网站、开发APP或者其他软件 发表论文、持有发明、专利 参与开源、参加各种技术交流和分享 参与创业 持续Impact ]]></description>
+</item></channel>
+</rss>

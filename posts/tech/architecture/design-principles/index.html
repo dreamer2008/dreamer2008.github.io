@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>A000001 面向对象的设计原则 - Tom&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="A000001 面向对象的设计原则" />
+<meta property="og:description" content="优秀的面向对象设计众所周知，软件=程序&#43;文档&#43;数据。通常来说，在一个软件系统的生命周期中，软件维护的时间&raquo;软件原始开发的时间。注：维护包括bug修复、各种优化和添加新功能。
+所以，个人认为，优秀设计的终极目标是提高软件的可维护性(Maintainability)。不考虑可维护性的设计都是耍流氓。
+除了这个终极目标之外，还有可复用性，可扩展性（甚至还有健壮性、灵活性，可插拔性等等），这些目标虽然含义不完全相同，但都是为了可维护性服务的。而所有这一切的基础，就是可读性。离开可读性，其他目标要么无法完成，要么代价特别大。它们的关系如下。
+需要指出的是，文档的可读性也非常重要。例如，有的API很多指标都不错，就是文档写得乱七八糟，导致使用非常不方便，这就得不偿失了。
+面向对象的三大特性封装、继承、多态是面向对象的三个基本特性。这是面向对象的语言为了提高可复用性和可维护性而具有的基本特性，也是OO语言相对于非OO语言的优势。
+面向对象设计的基本原则提到面向对象设计(OOD)，很多人会想到设计模式，但真正能把具体的设计模式信手拈来的又有多少呢？另一方面，其实这些设计模式只是具体的招数，不是内功。真正的内功心法更加重要，有了它们，你学习招数将更加顺手，即使不会具体的设计模式也能将软件设计得比较优雅，甚至你还可以在它们的指导下自创一些招数出来，做到“无招胜有招”。
+SOLID原则[SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)最早是由俗称「Uncle Bob」的Robert C. Martin提出。他也是&quot;Clean Code&quot;这本书的作者。SOLID代表以下5大设计原则。
+Single Responsibility Principle(SRP,单一职责原则): 一个类应该有且只有一个去改变它的理由，这意味着一个类应该只有一个职责
+Open/Closed Principle(OCP,开闭原则): 对象或实体应该对扩展开放，对修改封闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类
+Liskov Substitution Principle(LSP,里氏替换原则): 任何基类可以出现的地方，子类一定可以出现。在对象 x 为类型 T 时 q(x) 成立，那么当 S 是 T 的子类时，对象 y 为类型 S 时 q(y) 也应成立。（即对父类的调用同样适用于子类）
+Interface Segregation Principle(ISP,接口隔离原则): 使用多个隔离/客户端相关的接口，比使用单个通用接口要好
+Dependency Inversion Principle(DIP,依赖反转原则): 实体必须依靠抽象而不是具体实现。它表示高层次的模块不应该依赖于低层次的模块，它们都应该依赖于抽象
+其他常用原则除了SOLID原则，还有一些其他原则会经常被提到。
+Composite Reuse Principle(CRP,合成复用原则):尽量使用合成/聚合的方式，而不是使用继承
+迪米特法则(Law of Demeter) 又叫最少知道原则(Least Knowledge Principle)。一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立
+避免重复原则（DRY - Don’t Repeat Yourself）
+又叫一次且仅一次（once and only once，简称OAOO)。编程的最基本原则是避免重复。在程序代码中总会有很多结构体，如循环、函数、类等等。一旦你重复某个语句或概念，就会很容易形成一个抽象体
+简单原则（Keep It Simple and Stupid） 简单是软件设计的目标，简单的代码占用时间少，漏洞少，并且易于修改" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/tech/architecture/design-principles/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-02-19T19:41:53+00:00" />
+<meta property="article:modified_time" content="2017-02-19T19:41:53+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A000001 面向对象的设计原则"/>
+<meta name="twitter:description" content="优秀的面向对象设计众所周知，软件=程序&#43;文档&#43;数据。通常来说，在一个软件系统的生命周期中，软件维护的时间&raquo;软件原始开发的时间。注：维护包括bug修复、各种优化和添加新功能。
+所以，个人认为，优秀设计的终极目标是提高软件的可维护性(Maintainability)。不考虑可维护性的设计都是耍流氓。
+除了这个终极目标之外，还有可复用性，可扩展性（甚至还有健壮性、灵活性，可插拔性等等），这些目标虽然含义不完全相同，但都是为了可维护性服务的。而所有这一切的基础，就是可读性。离开可读性，其他目标要么无法完成，要么代价特别大。它们的关系如下。
+需要指出的是，文档的可读性也非常重要。例如，有的API很多指标都不错，就是文档写得乱七八糟，导致使用非常不方便，这就得不偿失了。
+面向对象的三大特性封装、继承、多态是面向对象的三个基本特性。这是面向对象的语言为了提高可复用性和可维护性而具有的基本特性，也是OO语言相对于非OO语言的优势。
+面向对象设计的基本原则提到面向对象设计(OOD)，很多人会想到设计模式，但真正能把具体的设计模式信手拈来的又有多少呢？另一方面，其实这些设计模式只是具体的招数，不是内功。真正的内功心法更加重要，有了它们，你学习招数将更加顺手，即使不会具体的设计模式也能将软件设计得比较优雅，甚至你还可以在它们的指导下自创一些招数出来，做到“无招胜有招”。
+SOLID原则[SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)最早是由俗称「Uncle Bob」的Robert C. Martin提出。他也是&quot;Clean Code&quot;这本书的作者。SOLID代表以下5大设计原则。
+Single Responsibility Principle(SRP,单一职责原则): 一个类应该有且只有一个去改变它的理由，这意味着一个类应该只有一个职责
+Open/Closed Principle(OCP,开闭原则): 对象或实体应该对扩展开放，对修改封闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类
+Liskov Substitution Principle(LSP,里氏替换原则): 任何基类可以出现的地方，子类一定可以出现。在对象 x 为类型 T 时 q(x) 成立，那么当 S 是 T 的子类时，对象 y 为类型 S 时 q(y) 也应成立。（即对父类的调用同样适用于子类）
+Interface Segregation Principle(ISP,接口隔离原则): 使用多个隔离/客户端相关的接口，比使用单个通用接口要好
+Dependency Inversion Principle(DIP,依赖反转原则): 实体必须依靠抽象而不是具体实现。它表示高层次的模块不应该依赖于低层次的模块，它们都应该依赖于抽象
+其他常用原则除了SOLID原则，还有一些其他原则会经常被提到。
+Composite Reuse Principle(CRP,合成复用原则):尽量使用合成/聚合的方式，而不是使用继承
+迪米特法则(Law of Demeter) 又叫最少知道原则(Least Knowledge Principle)。一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立
+避免重复原则（DRY - Don’t Repeat Yourself）
+又叫一次且仅一次（once and only once，简称OAOO)。编程的最基本原则是避免重复。在程序代码中总会有很多结构体，如循环、函数、类等等。一旦你重复某个语句或概念，就会很容易形成一个抽象体
+简单原则（Keep It Simple and Stupid） 简单是软件设计的目标，简单的代码占用时间少，漏洞少，并且易于修改"/>
+<meta name="application-name" content="Tom&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Tom&#39;s Blog">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/tech/architecture/design-principles/" /><link rel="prev" href="http://example.org/posts/tech/python/python-note3/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A000001 面向对象的设计原则",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/tech\/architecture\/design-principles\/"
+        },"genre": "posts","wordcount":  82 ,
+        "url": "http:\/\/example.org\/posts\/tech\/architecture\/design-principles\/","datePublished": "2017-02-19T19:41:53+00:00","dateModified": "2017-02-19T19:41:53+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Tom"},"author": {
+                "@type": "Person",
+                "name": "Tom"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="" header-mobile=""><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/tech/architecture/design-principles/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="#" onclick="return false;" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/posts/tech/architecture/design-principles/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">A000001 面向对象的设计原则</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-02-19">2017-02-19</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2017-02-19">2017-02-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;82 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="content" id="content"><h2 id="优秀的面向对象设计" class="headerLink">
+    <a href="#%e4%bc%98%e7%a7%80%e7%9a%84%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e8%ae%be%e8%ae%a1" class="header-mark"></a>优秀的面向对象设计</h2><p>众所周知，软件=程序+文档+数据。通常来说，在一个软件系统的生命周期中，软件维护的时间&raquo;软件原始开发的时间。注：维护包括bug修复、各种优化和添加新功能。</p>
+<p>所以，个人认为，优秀设计的终极目标是提高软件的可维护性(Maintainability)。不考虑可维护性的设计都是耍流氓。</p>
+<p>除了这个终极目标之外，还有可复用性，可扩展性（甚至还有健壮性、灵活性，可插拔性等等），这些目标虽然含义不完全相同，但都是为了可维护性服务的。而所有这一切的基础，就是可读性。离开可读性，其他目标要么无法完成，要么代价特别大。它们的关系如下。</p>
+<!-- raw HTML omitted -->
+<p><strong>需要指出的是，文档的可读性也非常重要</strong>。例如，有的API很多指标都不错，就是文档写得乱七八糟，导致使用非常不方便，这就得不偿失了。</p>
+<h2 id="面向对象的三大特性" class="headerLink">
+    <a href="#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%9a%84%e4%b8%89%e5%a4%a7%e7%89%b9%e6%80%a7" class="header-mark"></a>面向对象的三大特性</h2><p><strong>封装、继承、多态</strong>是面向对象的三个基本特性。这是面向对象的语言为了提高可复用性和可维护性而具有的基本特性，也是OO语言相对于非OO语言的优势。</p>
+<h2 id="面向对象设计的基本原则" class="headerLink">
+    <a href="#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e8%ae%be%e8%ae%a1%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%8e%9f%e5%88%99" class="header-mark"></a>面向对象设计的基本原则</h2><p>提到面向对象设计(OOD)，很多人会想到设计模式，但真正能把具体的设计模式信手拈来的又有多少呢？另一方面，其实这些设计模式只是具体的招数，不是内功。真正的内功心法更加重要，有了它们，你学习招数将更加顺手，即使不会具体的设计模式也能将软件设计得比较优雅，甚至你还可以在它们的指导下自创一些招数出来，做到“无招胜有招”。</p>
+<h3 id="solid原则" class="headerLink">
+    <a href="#solid%e5%8e%9f%e5%88%99" class="header-mark"></a>SOLID原则</h3><p>[SOLID](<a href="https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)</a>最早是由俗称「Uncle Bob」的Robert C. Martin提出。他也是&quot;Clean Code&quot;这本书的作者。SOLID代表以下5大设计原则。</p>
+<ul>
+<li>
+<p>Single Responsibility Principle(SRP,单一职责原则): 一个类应该有且只有一个去改变它的理由，这意味着一个类应该只有一个职责</p>
+</li>
+<li>
+<p>Open/Closed Principle(OCP,开闭原则): 对象或实体应该对扩展开放，对修改封闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类</p>
+</li>
+<li>
+<p>Liskov Substitution Principle(LSP,里氏替换原则): 任何基类可以出现的地方，子类一定可以出现。在对象 x 为类型 T 时 q(x) 成立，那么当 S 是 T 的子类时，对象 y 为类型 S 时 q(y) 也应成立。（即对父类的调用同样适用于子类）</p>
+</li>
+<li>
+<p>Interface Segregation Principle(ISP,接口隔离原则): 使用多个隔离/客户端相关的接口，比使用单个通用接口要好</p>
+</li>
+<li>
+<p>Dependency Inversion Principle(DIP,依赖反转原则): 实体必须依靠抽象而不是具体实现。它表示高层次的模块不应该依赖于低层次的模块，它们都应该依赖于抽象</p>
+</li>
+</ul>
+<h3 id="其他常用原则" class="headerLink">
+    <a href="#%e5%85%b6%e4%bb%96%e5%b8%b8%e7%94%a8%e5%8e%9f%e5%88%99" class="header-mark"></a>其他常用原则</h3><p>除了SOLID原则，还有一些其他原则会经常被提到。</p>
+<ul>
+<li>
+<p>Composite Reuse Principle(CRP,合成复用原则):尽量使用合成/聚合的方式，而不是使用继承</p>
+</li>
+<li>
+<p>迪米特法则(Law of Demeter)
+又叫最少知道原则(Least Knowledge Principle)。一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立</p>
+</li>
+<li>
+<p>避免重复原则（DRY - Don’t Repeat Yourself）</p>
+</li>
+</ul>
+<p>又叫一次且仅一次（once and only once，简称OAOO)。编程的最基本原则是避免重复。在程序代码中总会有很多结构体，如循环、函数、类等等。一旦你重复某个语句或概念，就会很容易形成一个抽象体</p>
+<ul>
+<li>简单原则（Keep It Simple and Stupid）</li>
+</ul>
+<p>简单是软件设计的目标，简单的代码占用时间少，漏洞少，并且易于修改</p>
+<ul>
+<li>避免过早优化(Avoid Premature Optimization)</li>
+</ul>
+<p>除非你的代码运行的比你想像中的要慢，否则别去优化。假如你真的想优化，就必须先想好如何用数据证明，它的速度变快了。
+“过早的优化是一切罪恶的根源”——Donald Knuth</p>
+<h2 id="参考资料" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-mark"></a>参考资料</h2><ol>
+<li>
+<p><a href="http://www.csdn.net/article/2011-07-29/302424" target="_blank" rel="noopener noreferrer">优秀程序设计的18大原则</a></p>
+</li>
+<li>
+<p><a href="http://blog.jobbole.com/86267/" target="_blank" rel="noopener noreferrer">S.O.L.I.D：面向对象设计的头 5 大原则</a></p>
+</li>
+</ol>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2017-02-19</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/tech/python/python-note3/" class="prev" rel="prev" title="Python学习笔记3"><i class="fas fa-angle-left fa-fw"></i>Python学习笔记3</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.110.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false}};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>
