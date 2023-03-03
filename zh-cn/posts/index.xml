@@ -1,0 +1,107 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - Tom&#39;s Blog</title>
+        <link>http://example.org/zh-cn/posts/</link>
+        <description>所有文章 | Tom&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Python学习笔记3</title>
+    <link>http://example.org/zh-cn/posts/tech/dev/python-note3/</link>
+    <pubDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/dev/python-note3/</guid>
+    <description><![CDATA[面向对象 基本概念Python中的类提供了面向对象编程的所有基本功能：类的继承机制允许多个基类，派生类可以覆盖基类中的任何方法，方法中可以调用]]></description>
+</item><item>
+    <title>Python学习笔记2</title>
+    <link>http://example.org/zh-cn/posts/tech/dev/python-note2/</link>
+    <pubDate>Sun, 05 Jun 2016 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/dev/python-note2/</guid>
+    <description><![CDATA[函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段 参数传递 传不可变对象实例：在 python 中，strings, tuples, 和 numbers 是不可更改的对象]]></description>
+</item><item>
+    <title>简约之美：软件设计之道</title>
+    <link>http://example.org/zh-cn/posts/tech/dev/code-simplicity/</link>
+    <pubDate>Sat, 07 May 2016 20:08:19 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/dev/code-simplicity/</guid>
+    <description><![CDATA[引子正如译者所言。在软件的生命周期中，往往维护成本&raquo;开发成本。而维护成本又会随着软件复杂度的降低而降低，所有，我们要尽量降低软件]]></description>
+</item><item>
+    <title>编写可读代码的艺术</title>
+    <link>http://example.org/zh-cn/posts/tech/dev/readable-code/</link>
+    <pubDate>Sun, 06 Mar 2016 21:23:33 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/dev/readable-code/</guid>
+    <description><![CDATA[引子写代码是程序员的基本功。但是，程序员，你真的会写代码吗？今天，我们不谈什么高大上的“架构”，就谈谈怎么写代码。 作为程序员，你看过、写过、]]></description>
+</item><item>
+    <title>Python学习笔记1</title>
+    <link>http://example.org/zh-cn/posts/tech/dev/python-note1/</link>
+    <pubDate>Sun, 17 Jan 2016 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/dev/python-note1/</guid>
+    <description><![CDATA[Python入门 Python简介脚本语言。解释语言。动态语言。默认的解释器CPython。 Python之父—荷兰人Guido van Rossum。]]></description>
+</item><item>
+    <title>打造个人品牌</title>
+    <link>http://example.org/zh-cn/posts/influence/personal-brand/</link>
+    <pubDate>Sun, 17 Jan 2016 17:42:22 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/influence/personal-brand/</guid>
+    <description><![CDATA[摘要最近几年，“个人品牌”、“个人影响力”逐渐被人提及。然而他们真的那么重要吗？我们又应该如何打造呢？ 正文首先是一篇泼冷水的文章，发人深省，]]></description>
+</item><item>
+    <title>做现实的理想主义者</title>
+    <link>http://example.org/zh-cn/posts/essay/realistic-idealist/</link>
+    <pubDate>Mon, 20 Apr 2015 00:05:00 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/essay/realistic-idealist/</guid>
+    <description><![CDATA[&mdash; 节选自做现实的理想主义者 世界不属于理想主义者，因为他们懦弱，没有勇气面对真相; 世界也不属于现实主义者，因为他们只是在重复别人的生活。 世界属]]></description>
+</item><item>
+    <title>Github Blogging with Hexo</title>
+    <link>http://example.org/zh-cn/posts/influence/github-blogging-with-hexo/</link>
+    <pubDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/influence/github-blogging-with-hexo/</guid>
+    <description><![CDATA[<p>现在github非常火，很多人（包括很多爱写作的非程序猿）都在上面开博了。推荐两篇文章：</p>
+<ul>
+<li>
+<p><a href="http://zhuanlan.zhihu.com/cnfeat/19743861" target="_blank" rel="noopener noreferrer">为什么你要写博客？</a></p>
+</li>
+<li>
+<p><a href="http://stormzhang.com/android/2016/03/04/why-i-keep-writing-blog/" target="_blank" rel="noopener noreferrer">我为什么坚持写博客？</a></p>
+</li>
+</ul>
+<p>工具方面，从基于Ruby的Jekyll，Octopress，到基于Python的Pelican，再到基于Node.js的Hexo。经过试用，我最终选择了Hexo。更多的工具，请看<a href="http://www.tuicool.com/articles/rmyuEnm" target="_blank" rel="noopener noreferrer">这里</a>。</p>
+<h2 id="hexo-简介" class="headerLink">
+    <a href="#hexo-%e7%ae%80%e4%bb%8b" class="header-mark"></a>Hexo 简介</h2><p><a href="http://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>出自一个台湾大学生<a href="https://github.com/tommy351" target="_blank" rel="noopener noreferrer">tommy351</a>之手（原来我们大中华区也有世界级的编程牛人啊。赞一个！）。</p>
+<p>Hexo是一个快速的、强大的Blog框架，主要是由 Node.js 构建出来的。同时支持多线程生成，上百个文件只需要花数秒中就能生成。</p>
+<p>Hexo还支持GitHub Flavored Markdown 和所有的 Octopress 插件和 高兼容 Jekyll/Octopress。</p>
+<h2 id="hexo-安装" class="headerLink">
+    <a href="#hexo-%e5%ae%89%e8%a3%85" class="header-mark"></a>Hexo 安装</h2><p>Hexo 是一个轻量的静态博客框架。通过Hexo可以快速生成一个静态博客框架,仅需要几条命令就可以完成,相当方便。</p>
+<ul>
+<li>
+<p>安装Git和Node.js</p>
+</li>
+<li>
+<p>安装和配置Hexo</p>
+</li>
+<li>
+<p>申请github账号</p>
+</li>
+<li>
+<p>编写和发布博客</p>
+</li>
+</ul>
+<p>具体可以参考这几篇文章：</p>
+<ul>
+<li>
+<p><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener noreferrer">如何搭建一个独立博客</a></p>
+</li>
+<li>
+<p><a href="http://www.jianshu.com/p/73779eacb494" target="_blank" rel="noopener noreferrer">Hexo 3.0 静态博客使用指南</a></p>
+</li>
+<li>
+<p><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="noopener noreferrer">hexo你的博客</a></p>
+</li>
+<li>
+<p><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="noopener noreferrer">hexo系列教程</a></p>
+</li>
+</ul>]]></description>
+</item></channel>
+</rss>

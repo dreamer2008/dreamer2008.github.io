@@ -1,0 +1,58 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>markdown - 标签 - Tom&#39;s Blog</title>
+        <link>http://example.org/zh-cn/tags/markdown/</link>
+        <description>markdown - 标签 - Tom&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-cn/tags/markdown/" rel="self" type="application/rss+xml" /><item>
+    <title>Github Blogging with Hexo</title>
+    <link>http://example.org/zh-cn/posts/influence/github-blogging-with-hexo/</link>
+    <pubDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/influence/github-blogging-with-hexo/</guid>
+    <description><![CDATA[<p>现在github非常火，很多人（包括很多爱写作的非程序猿）都在上面开博了。推荐两篇文章：</p>
+<ul>
+<li>
+<p><a href="http://zhuanlan.zhihu.com/cnfeat/19743861" target="_blank" rel="noopener noreferrer">为什么你要写博客？</a></p>
+</li>
+<li>
+<p><a href="http://stormzhang.com/android/2016/03/04/why-i-keep-writing-blog/" target="_blank" rel="noopener noreferrer">我为什么坚持写博客？</a></p>
+</li>
+</ul>
+<p>工具方面，从基于Ruby的Jekyll，Octopress，到基于Python的Pelican，再到基于Node.js的Hexo。经过试用，我最终选择了Hexo。更多的工具，请看<a href="http://www.tuicool.com/articles/rmyuEnm" target="_blank" rel="noopener noreferrer">这里</a>。</p>
+<h2 id="hexo-简介" class="headerLink">
+    <a href="#hexo-%e7%ae%80%e4%bb%8b" class="header-mark"></a>Hexo 简介</h2><p><a href="http://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>出自一个台湾大学生<a href="https://github.com/tommy351" target="_blank" rel="noopener noreferrer">tommy351</a>之手（原来我们大中华区也有世界级的编程牛人啊。赞一个！）。</p>
+<p>Hexo是一个快速的、强大的Blog框架，主要是由 Node.js 构建出来的。同时支持多线程生成，上百个文件只需要花数秒中就能生成。</p>
+<p>Hexo还支持GitHub Flavored Markdown 和所有的 Octopress 插件和 高兼容 Jekyll/Octopress。</p>
+<h2 id="hexo-安装" class="headerLink">
+    <a href="#hexo-%e5%ae%89%e8%a3%85" class="header-mark"></a>Hexo 安装</h2><p>Hexo 是一个轻量的静态博客框架。通过Hexo可以快速生成一个静态博客框架,仅需要几条命令就可以完成,相当方便。</p>
+<ul>
+<li>
+<p>安装Git和Node.js</p>
+</li>
+<li>
+<p>安装和配置Hexo</p>
+</li>
+<li>
+<p>申请github账号</p>
+</li>
+<li>
+<p>编写和发布博客</p>
+</li>
+</ul>
+<p>具体可以参考这几篇文章：</p>
+<ul>
+<li>
+<p><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener noreferrer">如何搭建一个独立博客</a></p>
+</li>
+<li>
+<p><a href="http://www.jianshu.com/p/73779eacb494" target="_blank" rel="noopener noreferrer">Hexo 3.0 静态博客使用指南</a></p>
+</li>
+<li>
+<p><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="noopener noreferrer">hexo你的博客</a></p>
+</li>
+<li>
+<p><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="noopener noreferrer">hexo系列教程</a></p>
+</li>
+</ul>]]></description>
+</item></channel>
+</rss>

@@ -45,7 +45,7 @@
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/" selected>English</option><option value="/zh-cn/">简体中文</option><option value="/fr/">Français</option></select>
+                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/" selected>English</option><option value="/zh-cn/">简体中文</option></select>
                     </a><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
@@ -91,7 +91,7 @@
                 </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw"></i>
             </a><a href="#" onclick="return false;" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/" selected>English</option><option value="/zh-cn/">简体中文</option><option value="/fr/">Français</option></select>
+                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/" selected>English</option><option value="/zh-cn/">简体中文</option></select>
                 </a></div>
     </div>
 </header>
@@ -109,9 +109,9 @@
         srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x"
         sizes="auto"
         alt="/images/avatar.png"
-        title="/images/avatar.png" height="100" width="100"></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/dreamer2008" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/tomding2008/" title="LinkedIn" target="_blank" rel="noopener noreferrer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://space.bilibili.com/396377427/" title="bilibili" target="_blank" rel="noopener noreferrer me"><i data-svg-src="/svg/icons/bilibili.min.svg"></i></a><a href="mailto:dtstudy@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+        title="/images/avatar.png" height="100" width="100"></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/dreamer2008" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/tomding2008/" title="LinkedIn" target="_blank" rel="noopener noreferrer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="mailto:dtstudy@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/architecture/design-principles/">A000001 面向对象的设计原则</a>
+        <a href="/posts/tech/architecture/design-principles/">面向对象的设计原则</a>
     </h1><div class="post-meta">
         <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
         </span>&nbsp;<span class="post-publish">published on <time datetime="2017-02-19">2017-02-19</time></span></div><div class="content">优秀的面向对象设计众所周知，软件=程序+文档+数据。通常来说，在一个软件系统的生命周期中，软件维护的时间&raquo;软件原始开发的时间。注：维护包括bug修复、各种优化和添加新功能。
@@ -134,76 +134,36 @@ Composite Reuse Principle(CRP,合成复用原则):尽量使用合成/聚合的�
 简单原则（Keep It Simple and Stupid） 简单是软件设计的目标，简单的代码占用时间少，漏洞少，并且易于修改</div><div class="post-footer">
         <a href="/posts/tech/architecture/design-principles/">Read more...</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/python/python-note3/">Python学习笔记3</a>
+        <a href="/posts/tech/architecture/my-view-on-architecture/">架构师之我见</a>
     </h1><div class="post-meta">
         <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
-        </span>&nbsp;<span class="post-publish">published on <time datetime="2017-01-17">2017-01-17</time></span></div><div class="content">面向对象 基本概念Python中的类提供了面向对象编程的所有基本功能：类的继承机制允许多个基类，派生类可以覆盖基类中的任何方法，方法中可以调用基类中的同名方法。 对象可以包含任意数量和类型的数据。 OOP：属性(Property)和方法(Method)。 类（Class）和实例（Instance）
-class Student(object): def __init__(self, name, score): self.name = name self.score = score #!/usr/bin/python3 class MyClass: &#34;&#34;&#34;一个简单的类实例&#34;&#34;&#34; i = 12345 def f(self): return &#39;hello world&#39; # 实例化类 x = MyClass() # 访问类的属性和方法 print(&#34;MyClass 类的属性 i 为：&#34;, x.i) print(&#34;MyClass 类的方法 f 输出为：&#34;, x.f()) ##访问控制
-class Student(object): ... def get_name(self): return self.__name def get_score(self): return self.__score 需要注意的是，在Python中，变量名类似__xxx__的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的，不是private变量，所以，不能用__name__、__score__这样的变量名。
-有些时候，你会看到以一个下划线开头的实例变量名，比如_name，这样的实例变量外部是可以访问的，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。
-继承和多态动态语言的“鸭子类型”，它并不要求严格的继承体系，一个对象只要“看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子
-获取对象信息###使用type()
-&gt;&gt;&gt; type(fn)==types.FunctionType True ###使用isinstance() ###使用dir() 类似__xxx__的属性和方法在Python中都是有特殊用途的，比如__len__方法返回长度。在Python中，如果你调用len()函数试图获取一个对象的长度，实际上，在len()函数内部，它自动去调用该对象的__len__()方法，所以，下面的代码是等价的：
-&gt;&gt;&gt; len(&#39;ABC&#39;) 3 &gt;&gt;&gt; &#39;ABC&#39;.</div><div class="post-footer">
-        <a href="/posts/tech/python/python-note3/">Read more...</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%BC%80%E5%8F%91/">开发</a>,&nbsp;<a href="/tags/python/">Python</a></div></div>
+        </span>&nbsp;<span class="post-publish">published on <time datetime="2016-01-17">2016-01-17</time></span></div><div class="content">什么是软件架构(Software Architecture) 定义 软件架构是有关软件整体结构与组件的抽象描述，用于指导大型软件系统各个方面的设计。（原文：(https://zh.wikipedia.org/wiki/软件架构)）
+起源1960年代，Dijkstra（别告诉我你不知道他是谁）等人就已提出这个概念。1990年代以来，由于Rational和Microsoft内部的相关活动，逐渐开始流行起来。
+什么是架构师(Architect) 系统架构师(System Architect)其实，系统架构师分为很多种，企业架构师、软件架构师、硬件架构师、网络架构师、解决方案架构师等等。更多请参见：https://en.wikipedia.org/wiki/Software_architect.
+当然本文的重点是关注软件架构师，尤其是互联网软件架构师
+软件架构师软件架构师当然就是负责设计上面所说的软件架构的人。（这不废话嘛。呵呵）
+我对架构师的理解 工作职责 系统架构师，是技术的长期演进的远见，和主持系统各个部分的集成整合。职责是架构可否顺利实施、对核心部分质量的承担和框架搭建。 (原文：https://zh.wikipedia.org/wiki/系统架构师)
+任职要求0、架构师要有良好的沟通能力，跟技术团队、产品团队、业务团队等等都有良好的沟通
+1、知识、技能方面 1）架构师必须是优秀的程序员，必须有足够的设计经验、编程经验（个人认为至少3年，“天才”可以例外） 2）架构师需要有广博的知识面，深刻理解各种原理。通晓软硬件、操作系统、网络等各种知识
+2、思维方式、能力方面 1）抽象思维能力、逻辑推理能力、快速理解产品需求的能力 2）全局观、系统性思维 系统性思维、要理解整个系统的本质和关键点（重点、难点、容易变化的点、潜在的风险、最大的挑战和瓶颈） 3）要有技术前瞻性，要拥抱变化，但不要完美主义 不要企图一开始就设计一个完美的架构。优先考虑的应该是用较低的成本满足当前需求，并且保证一定的前瞻性就够了
+3、演讲和分享 1）多在内部分享，帮助团队提升和成长 2）善于走出去，多分享交流，不断为团队注入新鲜血液，同时提升自己的水平和提高个人的影响力
+首席架构师(CAO,Chief Architecture Officer)恩。等你先成为一名合格的架构师再说吧。CAO这个缩写也是醉了
+更多参考做人、做事，做架构师——架构师能力模型解析
+软件架构师的工作
+结语So, for me, at this moment, I got a long way to go. Fighting!</div><div class="post-footer">
+        <a href="/posts/tech/architecture/my-view-on-architecture/">Read more...</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/architecture/">architecture</a>,&nbsp;<a href="/tags/ood/">OOD</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/misc/mp/">微信公众号推荐</a>
+        <a href="/posts/misc/hello-world/">Hello World</a>
     </h1><div class="post-meta">
         <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
-        </span>&nbsp;<span class="post-publish">published on <time datetime="2016-11-20">2016-11-20</time></span></div><div class="content"> 综合 InfoQ (infoqchina) EGONetworks（egonetworks） 肉饼铺子 （robbinthoughts） CoolShell (http://coolshell.cn/) 建议每天读几篇 Tim Yang (http://timyang.net/) 建议每天读几篇 架构 高可用架构 （ArchNotes） 聊聊架构 （archtime） 架构师 （JiaGouX） 性能与架构 （yogoup） 开涛的博客 (kaitao-1234567) 编程技术 顶级程序员 (redhadoop) 论码农的自我修养（bit_tiger） 程序人生 （programmer_life） 程序员的那些事（iProgrammer） 程序员日志 （IT_log） 程序视界 （programmer_sight） 码农翻身 （coderising） ImportNew (importnew) 数据库 数据库开发 （DBDevs） InsideMySQL (InsideMySQL) 大数据与机器学习 大数据杂谈 （BigdataTina2016） 大数据 （hzdashuju） 机器之心 （almosthuman2014） 新智元 （AI_era） 董老师在硅谷 (donglaoshi-123) 移动开发 移动开发前线 （bornmobile） AndroidDeveloper （googdev） APP架构师 （appjiagou） iOS开发 (iOSDevTips) IT网红 MacTalk （sagacity-mac） 小道消息 （WebNotes） 嘀嗒嘀嗒 （AngelaTalk） 道哥的黑板报 （taosay） 精进学堂 （zenpark） </div><div class="post-footer">
-        <a href="/posts/misc/mp/">Read more...</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/python/python-note2/">Python学习笔记2</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
-        </span>&nbsp;<span class="post-publish">published on <time datetime="2016-06-05">2016-06-05</time></span></div><div class="content">函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段
-参数传递 传不可变对象实例：在 python 中，strings, tuples, 和 numbers 是不可更改的对象 传可变对象实例：而 list,dict 等则是可以修改的对象 参数类型 必需参数 关键字参数：使用关键字参数允许函数调用时参数的顺序与声明时不一致 默认参数 变长参数 递归函数 匿名函数lambda [arg1 [,arg2,&hellip;..argn]]:expression
-sum = lambda arg1, arg2: arg1 + arg2; # 调用sum函数 print (&#34;相加后的值为 : &#34;, sum( 10, 20 )) print (&#34;相加后的值为 : &#34;, sum( 20, 20 )) 变量作用域变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称。Python的作用域一共有4中，分别是： L （Local） 局部作用域 E （Enclosing） 闭包函数外的函数中 G （Global） 全局作用域 B （Built-in） 内建作用域 以 L –&gt; E –&gt; G –&gt;B 的规则查找，即：在局部找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，再者去内建中找。 Python 中只有模块（module），类（class）以及函数（def、lambda）才会引入新的作用域，其它的代码块（如 if/elif/else/、try/except、for/while等）是不会引入新的作用域的，也就是说这这些语句内定义的变量，外部也可以访问</div><div class="post-footer">
-        <a href="/posts/tech/python/python-note2/">Read more...</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%BC%80%E5%8F%91/">开发</a>,&nbsp;<a href="/tags/python/">Python</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/dev/code-simplicity/">简约之美：软件设计之道</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
-        </span>&nbsp;<span class="post-publish">published on <time datetime="2016-05-07">2016-05-07</time></span></div><div class="content">
-引子正如译者所言。在软件的生命周期中，往往维护成本&raquo;开发成本。而维护成本又会随着软件复杂度的降低而降低，所有，我们要尽量降低软件的复杂度。
-内容简介 优秀的软件设计简单明了。不过很遗憾，如今的计算机程序基本上都很复杂，恐怕无人能够确切知道所有代码都是怎么运转的。这本简明《简约之美：软件设计之道》旨在帮助读者利用科学规则掌握优秀设计的基础知识，《简约之美：软件设计之道》中给出的法则适用于所有编程语言和软件项目，并且永远有效。
-笔记 好程序员和差程序员的区别在于理解能力。差劲的程序员不理解自己做的事情 我们学习提高代码质量的全部原因在于，要想改进结果，提高代码质量是最重要的问题 作者将软件设计视为一门科学。软件设计的科学就是为软件做计划、制定决策的科学，它帮助大家制定这类决定： 1）程序的代码应当采用什么结构？ 2）是程序的速度重要，还是程序代码容易阅读重要？ 3）为满足需求，应该选择哪种编程语言？ 软件系统中任何与架构有关的技术决策，以及在开发系统中所做的技术决策，都可以归到“软件设计”的范畴里。 每个写代码的人都是设计师 一个人写出优秀软件的潜力，完全取决于他在多大程度上理解了“帮助其他人”的思想。在做与软件设计有关的决策时，指导法则就是判断能提供什么样的帮助（帮大忙、帮小忙，帮很多人、帮少数人） 设计程序员能尽可能容易开发和维护的软件系统，这样的系统才能为用户提供尽可能多的帮助，而且能持续提供尽可能多的帮助。 软件设计的方程式：D = V / E 1）任何一点改变，其可取成都与其价值成正比，与所付出的成本成反比 2）价值：包括可能价值和潜在价值 3）成本：包括调研的时间+沟通的时间+思考的时间+编码的时间 完整的方程式： D = (Vn + Vf) / (Ei + Em) 1）Vn：当前价值 Vf：未来价值 Ei：实现成本 Em：维护成本 2）随着时间的发展，D -&gt; Vf / Em 3）相比降低实现成本，降低维护成本更重要。在软件设计科学中，这点非常重要 设计的质量好坏，正比于该系统在未来能持续帮助他人时间的长短 变化定律：程序存在的时间越久，它的某个部分需要变化的可能性就越高 软件设计的三大误区： 1）编写不必要的代码 不要编写非必需的代码，而且要删除没用的代码 2）代码难以修改 僵化设计（rigid design）有两大原因：对未来做太多假设，不仔细设计就编码。设计程序时，应当根据你现在确切知道的需求，而不是你认为未来会出现的需求 3）过分追求通用 避免以上三大误区：渐进设计和开发，小步快跑 缺陷概率定律：在程序中新增缺陷的可能性与代码修改量成正比 最好的设计，就是能适应外界尽可能多的变化，而软件自身的变化要尽可能少 永远不要“修复”任何东西，除非它真的是问题，而且有证据表明它的存在 理想情况下，任何系统里的任何信息，都应当只存在一次 简洁定律：软件任何一部分的维护难度，正比于该部分的简洁程度 简洁是相对的。简单到啥子都能看懂 保持可读性、一致性，简单的设计 除了新增功能，以下做法也会增加复杂性 1）扩展软件用途 2）新增程序员 3）做无谓的改变 4）困于糟糕的技术 5）理解错误 6）糟糕的设计或不做设计 7）重新发明轮子 复杂问题 1）大多数麻烦的设计问题，都可以用在纸上画图或写出来的办法找到答案 2）如果某个部分太复杂，就将其分解成小任务。。。分而治之 3）可以在做新功能的时间做重新设计和简化 推倒重来，需要同时满足以下条件 1）已经完成了准确评估，证明重写比重构好 2）有足够的时间 3）设计水平要比原来高 4）完全打算好了设计新系统，在每一步都有用户提供反馈 5）有足够的资源，可兼顾维护老系统和开发新系统 测试定律：你对软件行为的了解程度，等于你对它的测试程序 </div><div class="post-footer">
-        <a href="/posts/tech/dev/code-simplicity/">Read more...</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tech/dev/readable-code/">编写可读代码的艺术</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Tom</a>
-        </span>&nbsp;<span class="post-publish">published on <time datetime="2016-03-06">2016-03-06</time></span></div><div class="content">
-引子写代码是程序员的基本功。但是，程序员，你真的会写代码吗？今天，我们不谈什么高大上的“架构”，就谈谈怎么写代码。
-作为程序员，你看过、写过、改过、删过的代码可能不计其数。然而，回头想想，真正让你感到赏心悦目、拍手称快的代码又有多少呢？要知道，你读代码的时间远远大于你实际写代码的时间。如果代码可读性不好，你的工作效率肯定会大打折扣。特别是，对于一个团队来说，如果没有良好的、统一的代码规范，协同工作效率必然很受影响，造成不必要的时间浪费。
-《Clean Code》的作者Bob大叔认为“在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。” 哈哈。太TM经典了。
-书的目录如下： （图片来源：xingoo的博客）
-内容简介 细节决定成败，思路清晰、言简意赅的代码让程序员一目了然；而格式凌乱、拖沓冗长的代码让程序员一头雾水。除了可以正确运行以外，优秀的代码必须具备良好的可读性，编写的代码要使其他人能在最短的时间内理解才行。本书旨在强调代码对人的友好性和可读性。
-可读性为什么重要 书中观点 软件成本 = 开发成本 + 维护成本。往往，维护成本&raquo;开发成本。这其中耗费的主要成本就是由于理解代码和修改代码造成的。
-——《Structured Design》
-个人观点 可读性永远是第一位的。代码的可读性与效率、架构、易于测试一点也不冲突。 代码可读性好、bug少是对程序员的基本要求。
-前言 本书旨在帮助你把代码写得更好 。。。我们希望本书对你每天的编程工作有很多帮助，并且希望你把本书推荐给你团队中的每个人。
-本文从命名、注释、代码布局、简化逻辑等方面阐述如何写出可读性高的代码
-总结 第1章 代码应当易于理解 可读性基本定理
-Code should be written to minimize the time it would take for someone else to understand it.
-代码的写法应当使别人理解它所需的时间最小化。
-第一部分 表面层次的改进 一定要让命名可以“自解释”，尽量具体形象。不要随便缩写，可读性比变量长短重要的多（当然也不要太长） 不要用汉语拼音，不要使用有二义性的词，如filter 注意代码的美观：缩进、分段、空格、空行、适当的对齐、顺序的一致性。在团队中，一致的风格比“正确”的风格重要。如，句尾的大括号 好代码&gt;坏代码+好注释。为缺陷加TODO注释。为特殊的地方写注释。写不同层次的注释。行级&lt;方法级&lt;文件级&lt;包级 使用明确、恰当、含义丰富的词精确描述函数的行为。注释中可以给出I/O的例子 第二部分 简化循环和逻辑 形式上嵌套一般不超过2层，能return的尽早return。这个原则可以让你大大降低if-else的嵌套深度 不要滥用三目运算符 一定要做参数校验。对于不合法的参数：直接return、抛出异常、logging 拆分过长或者过于复杂的表达式：解释变量、总结变量 减少不必要的变量、合理控制变量的作用域 第三部分 重新组织代码 抽出不相关的子问题，封装起来。如：各种工具类 将通用代码和项目专有代码分开 一次只做一件事情 用自然语言描述问题，理清思路，能写出更好懂的代码 质疑和拆分你的需求，消除不必要的功能 保持代码库的轻量级，删除无用代码，尽量使用库函数 第四部分 精选话题 测试代码的可读性与非测试代码的可读性同样重要 对测试代码的使用者隐去不重要的细节，以便突出更重要的细节 让错误信息具有更好的可读性 又简单又能完成工作的测试值更好 为测试函数起个好的名字。Test_类名_方法名_情形 过犹不及： 1）牺牲生产代码的可读性，只是为了方便测试 2）顽固地追求100%的测试覆盖率 3）让测试成为产品开发的主导和障碍 </div><div class="post-footer">
-        <a href="/posts/tech/dev/readable-code/">Read more...</a></div>
-</article><ul class="pagination"><li class="page-item active">
-                    <span class="page-link">
-                        <a href="/">1</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/2/">2</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/3/">3</a>
-                    </span>
-                </li></ul></div></div>
+        </span>&nbsp;<span class="post-publish">published on <time datetime="2015-04-18">2015-04-18</time></span></div><div class="content">NOTE: This is just a default demo. For hexo, please refer to my blog here.
+Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick Start Create a new post$ hexo new &#34;My New Post&#34; More info: Writing
+Run server$ hexo server More info: Server</div><div class="post-footer">
+        <a href="/posts/misc/hello-world/">Read more...</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/misc/">misc</a></div></div>
+</article></div></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
                     Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.110.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
@@ -218,7 +178,8 @@ Code should be written to minimize the time it would take for someone else to un
         </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-1":"a programmer"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"id-1":["id-1"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"data":{"id-1":"a programmer"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"id-1":["id-1"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
 </body>
 
 </html>

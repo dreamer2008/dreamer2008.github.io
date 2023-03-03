@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Python学习笔记1 - Tom&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Python学习笔记1" />
+<meta property="og:description" content="Python入门 Python简介脚本语言。解释语言。动态语言。默认的解释器CPython。 Python之父—荷兰人Guido van Rossum。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/zh-cn/posts/tech/dev/python-note1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-01-17T22:05:50+00:00" />
+<meta property="article:modified_time" content="2016-01-17T22:05:50+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python学习笔记1"/>
+<meta name="twitter:description" content="Python入门 Python简介脚本语言。解释语言。动态语言。默认的解释器CPython。 Python之父—荷兰人Guido van Rossum。"/>
+<meta name="application-name" content="Tom&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Tom&#39;s Blog">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/zh-cn/posts/tech/dev/python-note1/" /><link rel="prev" href="http://example.org/zh-cn/posts/influence/personal-brand/" /><link rel="next" href="http://example.org/zh-cn/posts/tech/dev/readable-code/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Python学习笔记1",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/zh-cn\/posts\/tech\/dev\/python-note1\/"
+        },"genre": "posts","keywords": "开发, Python","wordcount":  2527 ,
+        "url": "http:\/\/example.org\/zh-cn\/posts\/tech\/dev\/python-note1\/","datePublished": "2016-01-17T22:05:50+00:00","dateModified": "2016-01-17T22:05:50+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Tom"},"author": {
+                "@type": "Person",
+                "name": "Tom"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="" header-mobile=""><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/zh-cn/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/zh-cn/posts/"> 文章 </a><a class="menu-item" href="/zh-cn/tags/"> 标签 </a><a class="menu-item" href="/zh-cn/categories/"> 分类 </a><a class="menu-item" href="/zh-cn/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/posts/tech/dev/python-note1/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/zh-cn/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/zh-cn/posts/" title="">文章</a><a class="menu-item" href="/zh-cn/tags/" title="">标签</a><a class="menu-item" href="/zh-cn/categories/" title="">分类</a><a class="menu-item" href="/zh-cn/about/" title="">关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="#" onclick="return false;" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/zh-cn/posts/tech/dev/python-note1/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Python学习笔记1</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/zh-cn/" title="Author" rel=" author" class="author">Tom</a>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-01-17">2016-01-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2016-01-17">2016-01-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2527 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#python简介">Python简介</a></li>
+    <li><a href="#python用途">Python用途</a></li>
+    <li><a href="#python优缺点">Python优缺点</a></li>
+    <li><a href="#第一个python程序">第一个Python程序</a></li>
+    <li><a href="#编程方式">编程方式</a>
+      <ul>
+        <li><a href="#交互式">交互式</a></li>
+        <li><a href="#脚本式">脚本式</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#基本特点">基本特点</a></li>
+    <li><a href="#数据类型">数据类型</a>
+      <ul>
+        <li><a href="#整数">整数</a></li>
+        <li><a href="#浮点数">浮点数</a></li>
+        <li><a href="#字符串">字符串</a></li>
+        <li><a href="#list">List</a></li>
+        <li><a href="#tuple">Tuple</a></li>
+        <li><a href="#set">Set</a></li>
+        <li><a href="#dict">Dict</a></li>
+        <li><a href="#布尔值">布尔值</a></li>
+        <li><a href="#复数">复数</a></li>
+        <li><a href="#空值">空值</a></li>
+        <li><a href="#类型判断">类型判断</a></li>
+      </ul>
+    </li>
+    <li><a href="#数值运算与运算符">数值运算与运算符</a>
+      <ul>
+        <li><a href="#算术运算符">算术运算符</a></li>
+        <li><a href="#比较运算符">比较运算符</a></li>
+        <li><a href="#赋值运算符">赋值运算符</a></li>
+        <li><a href="#位运算符">位运算符</a></li>
+        <li><a href="#逻辑运算符">逻辑运算符</a></li>
+        <li><a href="#成员运算符">成员运算符</a></li>
+        <li><a href="#身份运算符">身份运算符</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#条件判断">条件判断</a></li>
+    <li><a href="#循环">循环</a>
+      <ul>
+        <li><a href="#for-in">for in</a></li>
+        <li><a href="#while">while</a></li>
+        <li><a href="#break">break</a></li>
+        <li><a href="#continue">continue</a></li>
+        <li><a href="#end-关键字">end 关键字</a></li>
+        <li><a href="#迭代器">迭代器</a></li>
+      </ul>
+    </li>
+    <li><a href="#再议不可变对象">再议不可变对象</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#python-2x-vs-3x">Python 2.x vs 3.x</a></li>
+    <li><a href="#学习材料">学习材料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><a class="lightgallery" href="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png" title="Python" data-thumbnail="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png">
+        <img
+            
+            loading="lazy"
+            src="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png"
+            srcset="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png, http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png 1.5x, http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png 2x"
+            sizes="auto"
+            alt="http://www.kandasoft.com/wp-content/uploads/2014/02/Python-Programming-Language.png">
+    </a></p>
+<h1 id="python入门" class="headerLink">
+    <a href="#python%e5%85%a5%e9%97%a8" class="header-mark"></a>Python入门</h1><h2 id="python简介" class="headerLink">
+    <a href="#python%e7%ae%80%e4%bb%8b" class="header-mark"></a>Python简介</h2><p>脚本语言。解释语言。动态语言。默认的解释器CPython。
+Python之父—荷兰人Guido van Rossum。诞生于1989年。第一个公开发行版发行于1991年</p>
+<h2 id="python用途" class="headerLink">
+    <a href="#python%e7%94%a8%e9%80%94" class="header-mark"></a>Python用途</h2><ol>
+<li>是网络应用，包括网站、后台服务等等；</li>
+<li>其次是许多日常需要的小工具，包括系统管理员需要的脚本任务等等；</li>
+<li>另外就是把其他语言开发的程序再包装起来，方便使用</li>
+<li>目前广泛应用于大数据和人工智能领域</li>
+</ol>
+<h2 id="python优缺点" class="headerLink">
+    <a href="#python%e4%bc%98%e7%bc%ba%e7%82%b9" class="header-mark"></a>Python优缺点</h2><ul>
+<li>性能差</li>
+<li>源码不能加密</li>
+</ul>
+<h2 id="第一个python程序" class="headerLink">
+    <a href="#%e7%ac%ac%e4%b8%80%e4%b8%aapython%e7%a8%8b%e5%ba%8f" class="header-mark"></a>第一个Python程序</h2><pre tabindex="0"><code>print(&#39;hello,world&#39;)
+</code></pre><h2 id="编程方式" class="headerLink">
+    <a href="#%e7%bc%96%e7%a8%8b%e6%96%b9%e5%bc%8f" class="header-mark"></a>编程方式</h2><h3 id="交互式" class="headerLink">
+    <a href="#%e4%ba%a4%e4%ba%92%e5%bc%8f" class="header-mark"></a>交互式</h3><h3 id="脚本式" class="headerLink">
+    <a href="#%e8%84%9a%e6%9c%ac%e5%bc%8f" class="header-mark"></a>脚本式</h3><p>Python式和Shell式</p>
+<h1 id="基础语法" class="headerLink">
+    <a href="#%e5%9f%ba%e7%a1%80%e8%af%ad%e6%b3%95" class="header-mark"></a>基础语法</h1><h2 id="基本特点" class="headerLink">
+    <a href="#%e5%9f%ba%e6%9c%ac%e7%89%b9%e7%82%b9" class="header-mark"></a>基本特点</h2><ul>
+<li>大小写敏感</li>
+<li>缩进（4个空格）而不是括号</li>
+<li>注释：单行#，多行：&lsquo;&lsquo;&lsquo;或者&quot;&quot;&quot;</li>
+<li>input()和print()</li>
+</ul>
+<h2 id="数据类型" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="header-mark"></a>数据类型</h2><h3 id="整数" class="headerLink">
+    <a href="#%e6%95%b4%e6%95%b0" class="header-mark"></a>整数</h3><p>在整数除法中，除法（/）总是返回一个浮点数。，如果只想得到整数的结果，丢弃可能的分数部分，可以使用运算符//，称为地板除</p>
+<h3 id="浮点数" class="headerLink">
+    <a href="#%e6%b5%ae%e7%82%b9%e6%95%b0" class="header-mark"></a>浮点数</h3><h3 id="字符串" class="headerLink">
+    <a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-mark"></a>字符串</h3><ul>
+<li>Python中的字符串不能改变。在Python3中，所有的字符串都是Unicode字符串</li>
+<li>字符串是以单引号&rsquo;或双引号&quot;括起来的任意文本，比如&rsquo;abc&rsquo;，&ldquo;xyz&rdquo;。多行字符串&rsquo;&lsquo;&lsquo;或&quot;&quot;&quot;)</li>
+<li>默认不转义。转义：\  不转义/自然字符串：通过在字符串前加r或R</li>
+<li>反斜杠()可以作为续行符，表示下一行是上一行的延续。也可以使用 &ldquo;&rdquo;&quot;&hellip;&quot;&quot;&quot; 或者 &lsquo;&rsquo;&rsquo;&hellip;&rsquo;&rsquo;&rsquo; 跨越多行</li>
+<li>字符串可以用+运算符连接在一起，用*运算符重复</li>
+<li>Python中的字符串有两种索引方式，从左往右以0开始，从右往左以-1开始</li>
+</ul>
+<pre tabindex="0"><code>str = &#39;Runoob&#39;
+ 
+print (str)          # 输出字符串
+print (str[0:-1])    # 输出第一个到倒数第二个的所有字符
+print (str[0])       # 输出字符串第一个字符
+print (str[2:5])     # 输出从第三个开始到第五个的字符
+print (str[2:])      # 输出从第三个开始的后的所有字符
+print (str * 2)      # 输出字符串两次
+print (str + &#34;TEST&#34;) # 连接字符串
+</code></pre><h3 id="list" class="headerLink">
+    <a href="#list" class="header-mark"></a>List</h3><ul>
+<li>List（列表）是 Python 中使用最频繁的数据类型</li>
+<li>列表是写在方括号([])之间、用逗号分隔开的元素列表</li>
+<li>list是一种有序的集合，列表中的元素是可以改变的</li>
+<li>列表中元素的类型可以不相同，它支持数字，字符串甚至可以包含列表（所谓嵌套）</li>
+<li>支持append,pop,insert</li>
+</ul>
+<pre tabindex="0"><code>list = [ &#39;abcd&#39;, 786 , 2.23, &#39;runoob&#39;, 70.2 ]
+tinylist = [123, &#39;runoob&#39;]
+ 
+print (list)            # 输出完整列表
+print (list[0])         # 输出列表第一个元素
+print (list[1:3])       # 从第二个开始输出到第三个元素
+print (list[2:])        # 输出从第三个元素开始的所有元素
+print (tinylist * 2)    # 输出两次列表
+print (list + tinylist) # 连接列表
+</code></pre><h3 id="tuple" class="headerLink">
+    <a href="#tuple" class="header-mark"></a>Tuple</h3><ul>
+<li>元组（tuple）与列表类似，不同之处在于元组的元素不能修改。</li>
+<li>元组写在小括号(())里。可以把字符串看作一种特殊的元组</li>
+<li>虽然tuple的元素不可改变(“指向不变”)，但它可以包含可变的对象</li>
+<li>构造包含 0 个或 1 个元素的元组比较特殊，所以有一些额外的语法规则：</li>
+</ul>
+<pre tabindex="0"><code>tup1 = ()    # 空元组
+tup2 = (20,) # 一个元素，需要在元素后添加逗号
+</code></pre><ul>
+<li>string、list和tuple都属于sequence（序列）</li>
+</ul>
+<h3 id="set" class="headerLink">
+    <a href="#set" class="header-mark"></a>Set</h3><ul>
+<li>集合（set）是一个无序不重复元素的序列。</li>
+<li>基本功能是进行成员关系测试和删除重复元素。</li>
+<li>可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set()</li>
+<li>操作：add,remove 集合运算</li>
+</ul>
+<pre tabindex="0"><code>student = {&#39;Tom&#39;, &#39;Jim&#39;, &#39;Mary&#39;, &#39;Tom&#39;, &#39;Jack&#39;, &#39;Rose&#39;}
+s = set([1, 2, 3])
+</code></pre><h3 id="dict" class="headerLink">
+    <a href="#dict" class="header-mark"></a>Dict</h3><ul>
+<li>列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取</li>
+<li>字典是一种映射类型，字典用&quot;{ }&ldquo;标识，它是一个无序的键(key) : 值(value)对集合。</li>
+<li>键(key)必须使用不可变类型。</li>
+<li>在同一个字典中，键(key)必须是唯一的。</li>
+<li>dict是用空间来换取时间的一种方法
+要避免key不存在的错误，有两种办法，一是通过in判断key是否存在：</li>
+</ul>
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;Thomas&#39; in d
+False
+</code></pre><p>二是通过dict提供的get方法，如果key不存在，可以返回None，或者自己指定的value：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; d.get(&#39;Thomas&#39;)
+&gt;&gt;&gt; d.get(&#39;Thomas&#39;, -1)
+-1
+</code></pre><h3 id="布尔值" class="headerLink">
+    <a href="#%e5%b8%83%e5%b0%94%e5%80%bc" class="header-mark"></a>布尔值</h3><p>只有True和False两个值。可以参与and、or和not运算</p>
+<h3 id="复数" class="headerLink">
+    <a href="#%e5%a4%8d%e6%95%b0" class="header-mark"></a>复数</h3><p>可以用a + bj,或者complex(a,b)表示， 复数的实部a和虚部b都是浮点型。如 1 + 2j、 1.1 + 2.2j</p>
+<h3 id="空值" class="headerLink">
+    <a href="#%e7%a9%ba%e5%80%bc" class="header-mark"></a>空值</h3><p>空值是Python里一个特殊的值，用None表示。None不能理解为0，因为0是有意义的，而None是一个特殊的空值</p>
+<h3 id="类型判断" class="headerLink">
+    <a href="#%e7%b1%bb%e5%9e%8b%e5%88%a4%e6%96%ad" class="header-mark"></a>类型判断</h3><p>type()不会认为子类是一种父类类型。
+isinstance()会认为子类是一种父类类型。</p>
+<p>##变量
+a, b, c = 1, 2, &ldquo;runoob&rdquo;
+##常量
+PI=3.14</p>
+<h2 id="数值运算与运算符" class="headerLink">
+    <a href="#%e6%95%b0%e5%80%bc%e8%bf%90%e7%ae%97%e4%b8%8e%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-mark"></a>数值运算与运算符</h2><h3 id="算术运算符" class="headerLink">
+    <a href="#%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-mark"></a>算术运算符</h3><ul>
+<li>2**5 # 乘方</li>
+<li>17 % 3 # 取余</li>
+</ul>
+<h3 id="比较运算符" class="headerLink">
+    <a href="#%e6%af%94%e8%be%83%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-mark"></a>比较运算符</h3><p>!=</p>
+<h3 id="赋值运算符" class="headerLink">
+    <a href="#%e8%b5%8b%e5%80%bc%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-mark"></a>赋值运算符</h3><h3 id="位运算符" class="headerLink">
+    <a href="#%e4%bd%8d%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-mark"></a>位运算符</h3><h3 id="逻辑运算符" class="headerLink">
+    <a href="#%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-mark"></a>逻辑运算符</h3><p>and or not</p>
+<h3 id="成员运算符" class="headerLink">
+    <a href="#%e6%88%90%e5%91%98%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-mark"></a>成员运算符</h3><p>in, not in</p>
+<pre tabindex="0"><code>a = 10
+b = 20
+list = [1, 2, 3, 4, 5 ];
+ 
+if ( a in list ):
+   print (&#34;1 - 变量 a 在给定的列表中 list 中&#34;)
+else:
+   print (&#34;1 - 变量 a 不在给定的列表中 list 中&#34;)
+</code></pre><h3 id="身份运算符" class="headerLink">
+    <a href="#%e8%ba%ab%e4%bb%bd%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-mark"></a>身份运算符</h3><p>身份运算符用于比较两个对象的存储单元。类似于Java的==。</p>
+<ul>
+<li>is:x is y, 类似 id(x) == id(y)</li>
+<li>is not,x is not y ，类似 id(a) != id(b)</li>
+<li>is 与 == 区别：
+is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。</li>
+</ul>
+<h1 id="控制结构" class="headerLink">
+    <a href="#%e6%8e%a7%e5%88%b6%e7%bb%93%e6%9e%84" class="header-mark"></a>控制结构</h1><h2 id="条件判断" class="headerLink">
+    <a href="#%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" class="header-mark"></a>条件判断</h2><pre tabindex="0"><code>age = 3
+if age &gt;= 18:
+    print(&#39;adult&#39;)
+elif age &gt;= 6:
+    print(&#39;teenager&#39;)
+else:
+    print(&#39;kid&#39;)
+</code></pre><h2 id="循环" class="headerLink">
+    <a href="#%e5%be%aa%e7%8e%af" class="header-mark"></a>循环</h2><h3 id="for-in" class="headerLink">
+    <a href="#for-in" class="header-mark"></a>for in</h3><p>一种是for&hellip;in循环，经常用到range()函数。可以有else从句</p>
+<pre tabindex="0"><code>names = [&#39;Michael&#39;, &#39;Bob&#39;, &#39;Tracy&#39;]
+for name in names:
+    print(name)
+</code></pre><pre tabindex="0"><code>sum = 0
+for x in range(101):
+    sum = sum + x
+print(sum)
+</code></pre><h3 id="while" class="headerLink">
+    <a href="#while" class="header-mark"></a>while</h3><p>第二种循环是while循环。可以有else从句</p>
+<pre tabindex="0"><code>sum = 0
+n = 99
+while n &gt; 0:
+    sum = sum + n
+    n = n - 2
+print(sum)
+</code></pre><h3 id="break" class="headerLink">
+    <a href="#break" class="header-mark"></a>break</h3><h3 id="continue" class="headerLink">
+    <a href="#continue" class="header-mark"></a>continue</h3><h3 id="end-关键字" class="headerLink">
+    <a href="#end-%e5%85%b3%e9%94%ae%e5%ad%97" class="header-mark"></a>end 关键字</h3><p>关键字end可以用于将结果输出到同一行，或者在输出的末尾添加不同的字符</p>
+<h3 id="迭代器" class="headerLink">
+    <a href="#%e8%bf%ad%e4%bb%a3%e5%99%a8" class="header-mark"></a>迭代器</h3><ul>
+<li>迭代是Python最强大的功能之一，是访问集合元素的一种方式</li>
+<li>迭代器是一个可以记住遍历的位置的对象</li>
+<li>迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退</li>
+<li>迭代器有两个基本的方法：iter() 和 next()</li>
+</ul>
+<h2 id="再议不可变对象" class="headerLink">
+    <a href="#%e5%86%8d%e8%ae%ae%e4%b8%8d%e5%8f%af%e5%8f%98%e5%af%b9%e8%b1%a1" class="header-mark"></a>再议不可变对象</h2><p>对于不变对象来说，调用对象自身的任意方法，也不会改变该对象自身的内容。相反，这些方法会创建新的对象并返回，这样，就保证了不可变对象本身永远是不可变的</p>
+<h1 id="参考资料" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-mark"></a>参考资料</h1><h2 id="python-2x-vs-3x" class="headerLink">
+    <a href="#python-2x-vs-3x" class="header-mark"></a>Python 2.x vs 3.x</h2><p>2008年, Python3发布。最大的变化是源码文件默认使用utf-8编码</p>
+<ul>
+<li>更多区别：<a href="http://www.admin10000.com/document/144.html" target="_blank" rel="noopener noreferrer">Python3.x和Python2.x的区别</a></li>
+</ul>
+<h2 id="学习材料" class="headerLink">
+    <a href="#%e5%ad%a6%e4%b9%a0%e6%9d%90%e6%96%99" class="header-mark"></a>学习材料</h2><ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="noopener noreferrer">廖雪峰Python3教程</a></li>
+<li><a href="http://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="noopener noreferrer">Runoob Python3教程</a></li>
+<li><a href="http://www.phpxs.com/j/python" target="_blank" rel="noopener noreferrer">PHPXS Python基础教程</a></li>
+</ul>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2016-01-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.org/zh-cn/posts/tech/dev/python-note1/" data-title="Python学习笔记1" data-hashtags="开发,Python"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/zh-cn/posts/tech/dev/python-note1/" data-hashtag="开发"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.org/zh-cn/posts/tech/dev/python-note1/" data-title="Python学习笔记1"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Line" data-sharer="line" data-url="http://example.org/zh-cn/posts/tech/dev/python-note1/" data-title="Python学习笔记1"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/zh-cn/posts/tech/dev/python-note1/" data-title="Python学习笔记1"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-cn/tags/%E5%BC%80%E5%8F%91/">开发</a>,&nbsp;<a href="/zh-cn/tags/python/">Python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zh-cn/posts/influence/personal-brand/" class="prev" rel="prev" title="打造个人品牌"><i class="fas fa-angle-left fa-fw"></i>打造个人品牌</a>
+            <a href="/zh-cn/posts/tech/dev/readable-code/" class="next" rel="next" title="编写可读代码的艺术">编写可读代码的艺术<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.110.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/zh-cn/" target="_blank" rel="noopener noreferrer"></a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"deamer2008/dreamer2008.github.io"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/zh-cn/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true};</script><script type="text/javascript" src="/js/utterances.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

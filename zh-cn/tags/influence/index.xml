@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>influence - 标签 - Tom&#39;s Blog</title>
+        <link>http://example.org/zh-cn/tags/influence/</link>
+        <description>influence - 标签 - Tom&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 17 Jan 2016 17:42:22 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-cn/tags/influence/" rel="self" type="application/rss+xml" /><item>
+    <title>打造个人品牌</title>
+    <link>http://example.org/zh-cn/posts/influence/personal-brand/</link>
+    <pubDate>Sun, 17 Jan 2016 17:42:22 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/influence/personal-brand/</guid>
+    <description><![CDATA[摘要最近几年，“个人品牌”、“个人影响力”逐渐被人提及。然而他们真的那么重要吗？我们又应该如何打造呢？ 正文首先是一篇泼冷水的文章，发人深省，]]></description>
+</item></channel>
+</rss>

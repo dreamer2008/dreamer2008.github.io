@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>编写可读代码的艺术 - Tom&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="编写可读代码的艺术" />
+<meta property="og:description" content="引子写代码是程序员的基本功。但是，程序员，你真的会写代码吗？今天，我们不谈什么高大上的“架构”，就谈谈怎么写代码。 作为程序员，你看过、写过、" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/zh-cn/posts/tech/dev/readable-code/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-03-06T21:23:33+00:00" />
+<meta property="article:modified_time" content="2016-03-06T21:23:33+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="编写可读代码的艺术"/>
+<meta name="twitter:description" content="引子写代码是程序员的基本功。但是，程序员，你真的会写代码吗？今天，我们不谈什么高大上的“架构”，就谈谈怎么写代码。 作为程序员，你看过、写过、"/>
+<meta name="application-name" content="Tom&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Tom&#39;s Blog">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/zh-cn/posts/tech/dev/readable-code/" /><link rel="prev" href="http://example.org/zh-cn/posts/tech/dev/python-note1/" /><link rel="next" href="http://example.org/zh-cn/posts/tech/dev/code-simplicity/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "编写可读代码的艺术",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/zh-cn\/posts\/tech\/dev\/readable-code\/"
+        },"genre": "posts","wordcount":  1434 ,
+        "url": "http:\/\/example.org\/zh-cn\/posts\/tech\/dev\/readable-code\/","datePublished": "2016-03-06T21:23:33+00:00","dateModified": "2016-03-06T21:23:33+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Tom"},"author": {
+                "@type": "Person",
+                "name": "Tom"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="" header-mobile=""><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/zh-cn/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/zh-cn/posts/"> 文章 </a><a class="menu-item" href="/zh-cn/tags/"> 标签 </a><a class="menu-item" href="/zh-cn/categories/"> 分类 </a><a class="menu-item" href="/zh-cn/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/posts/tech/dev/readable-code/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/zh-cn/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/zh-cn/posts/" title="">文章</a><a class="menu-item" href="/zh-cn/tags/" title="">标签</a><a class="menu-item" href="/zh-cn/categories/" title="">分类</a><a class="menu-item" href="/zh-cn/about/" title="">关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="#" onclick="return false;" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/zh-cn/posts/tech/dev/readable-code/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">编写可读代码的艺术</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/zh-cn/" title="Author" rel=" author" class="author">Tom</a>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-03-06">2016-03-06</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2016-03-06">2016-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1434 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#书中观点">书中观点</a></li>
+    <li><a href="#个人观点">个人观点</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#第1章-代码应当易于理解">第1章 代码应当易于理解</a></li>
+    <li><a href="#第一部分-表面层次的改进">第一部分 表面层次的改进</a></li>
+    <li><a href="#第二部分-简化循环和逻辑">第二部分 简化循环和逻辑</a></li>
+    <li><a href="#第三部分-重新组织代码">第三部分 重新组织代码</a></li>
+    <li><a href="#第四部分-精选话题">第四部分 精选话题</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h1 id="引子" class="headerLink">
+    <a href="#%e5%bc%95%e5%ad%90" class="header-mark"></a>引子</h1><p>写代码是程序员的基本功。但是，程序员，你真的会写代码吗？今天，我们不谈什么高大上的“架构”，就谈谈怎么写代码。</p>
+<p>作为程序员，你看过、写过、改过、删过的代码可能不计其数。然而，回头想想，真正让你感到赏心悦目、拍手称快的代码又有多少呢？要知道，你读代码的时间远远大于你实际写代码的时间。如果代码可读性不好，你的工作效率肯定会大打折扣。特别是，对于一个团队来说，如果没有良好的、统一的代码规范，协同工作效率必然很受影响，造成不必要的时间浪费。</p>
+<p>《Clean Code》的作者Bob大叔认为“在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。” 哈哈。太TM经典了。</p>
+<p>书的目录如下： <a class="lightgallery" href="http://images.cnitblog.com/blog2015/449064/201505/141405470644668.jpg" title="目录" data-thumbnail="http://images.cnitblog.com/blog2015/449064/201505/141405470644668.jpg">
+        <img
+            
+            loading="lazy"
+            src="http://images.cnitblog.com/blog2015/449064/201505/141405470644668.jpg"
+            srcset="http://images.cnitblog.com/blog2015/449064/201505/141405470644668.jpg, http://images.cnitblog.com/blog2015/449064/201505/141405470644668.jpg 1.5x, http://images.cnitblog.com/blog2015/449064/201505/141405470644668.jpg 2x"
+            sizes="auto"
+            alt="http://images.cnitblog.com/blog2015/449064/201505/141405470644668.jpg">
+    </a>（图片来源：<a href="http://www.cnblogs.com/xing901022/p/4503286.html" target="_blank" rel="noopener noreferrer">xingoo</a>的博客）</p>
+<h1 id="内容简介" class="headerLink">
+    <a href="#%e5%86%85%e5%ae%b9%e7%ae%80%e4%bb%8b" class="header-mark"></a>内容简介</h1><blockquote>
+<p>细节决定成败，思路清晰、言简意赅的代码让程序员一目了然；而格式凌乱、拖沓冗长的代码让程序员一头雾水。除了可以正确运行以外，优秀的代码必须具备良好的可读性，编写的代码要使其他人能在最短的时间内理解才行。本书旨在强调代码对人的友好性和可读性。</p>
+</blockquote>
+<h1 id="可读性为什么重要" class="headerLink">
+    <a href="#%e5%8f%af%e8%af%bb%e6%80%a7%e4%b8%ba%e4%bb%80%e4%b9%88%e9%87%8d%e8%a6%81" class="header-mark"></a>可读性为什么重要</h1><h2 id="书中观点" class="headerLink">
+    <a href="#%e4%b9%a6%e4%b8%ad%e8%a7%82%e7%82%b9" class="header-mark"></a>书中观点</h2><blockquote>
+<p>软件成本 = 开发成本 + 维护成本。往往，维护成本&raquo;开发成本。这其中耗费的主要成本就是由于理解代码和修改代码造成的。</p>
+<p>——《Structured Design》</p>
+</blockquote>
+<h2 id="个人观点" class="headerLink">
+    <a href="#%e4%b8%aa%e4%ba%ba%e8%a7%82%e7%82%b9" class="header-mark"></a>个人观点</h2><blockquote>
+<p>可读性永远是第一位的。代码的可读性与效率、架构、易于测试一点也不冲突。
+代码可读性好、bug少是对程序员的基本要求。</p>
+</blockquote>
+<h1 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h1><blockquote>
+<p><strong>本书旨在帮助你把代码写得更好</strong> 。。。我们希望本书对你每天的编程工作有很多帮助，并且希望你把本书推荐给你团队中的每个人。</p>
+</blockquote>
+<p>本文从命名、注释、代码布局、简化逻辑等方面阐述如何写出可读性高的代码</p>
+<h1 id="总结" class="headerLink">
+    <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h1><h2 id="第1章-代码应当易于理解" class="headerLink">
+    <a href="#%e7%ac%ac1%e7%ab%a0-%e4%bb%a3%e7%a0%81%e5%ba%94%e5%bd%93%e6%98%93%e4%ba%8e%e7%90%86%e8%a7%a3" class="header-mark"></a>第1章 代码应当易于理解</h2><blockquote>
+<p>可读性基本定理</p>
+<p>Code should be written to minimize the time it would take for someone else to understand it.</p>
+<p>代码的写法应当使别人理解它所需的时间最小化。</p>
+</blockquote>
+<h2 id="第一部分-表面层次的改进" class="headerLink">
+    <a href="#%e7%ac%ac%e4%b8%80%e9%83%a8%e5%88%86-%e8%a1%a8%e9%9d%a2%e5%b1%82%e6%ac%a1%e7%9a%84%e6%94%b9%e8%bf%9b" class="header-mark"></a>第一部分 表面层次的改进</h2><ol>
+<li>一定要让命名可以“自解释”，尽量具体形象。不要随便缩写，可读性比变量长短重要的多（当然也不要太长）</li>
+<li>不要用汉语拼音，不要使用有二义性的词，如filter</li>
+<li>注意代码的美观：缩进、分段、空格、空行、适当的对齐、顺序的一致性。在团队中，一致的风格比“正确”的风格重要。如，句尾的大括号</li>
+<li>好代码&gt;坏代码+好注释。为缺陷加TODO注释。为特殊的地方写注释。写不同层次的注释。行级&lt;方法级&lt;文件级&lt;包级</li>
+<li>使用明确、恰当、含义丰富的词精确描述函数的行为。注释中可以给出I/O的例子</li>
+</ol>
+<h2 id="第二部分-简化循环和逻辑" class="headerLink">
+    <a href="#%e7%ac%ac%e4%ba%8c%e9%83%a8%e5%88%86-%e7%ae%80%e5%8c%96%e5%be%aa%e7%8e%af%e5%92%8c%e9%80%bb%e8%be%91" class="header-mark"></a>第二部分 简化循环和逻辑</h2><ol>
+<li>形式上嵌套一般不超过2层，能return的尽早return。这个原则可以让你大大降低if-else的嵌套深度</li>
+<li>不要滥用三目运算符</li>
+<li>一定要做参数校验。对于不合法的参数：直接return、抛出异常、logging</li>
+<li>拆分过长或者过于复杂的表达式：解释变量、总结变量</li>
+<li>减少不必要的变量、合理控制变量的作用域</li>
+</ol>
+<h2 id="第三部分-重新组织代码" class="headerLink">
+    <a href="#%e7%ac%ac%e4%b8%89%e9%83%a8%e5%88%86-%e9%87%8d%e6%96%b0%e7%bb%84%e7%bb%87%e4%bb%a3%e7%a0%81" class="header-mark"></a>第三部分 重新组织代码</h2><ol>
+<li>抽出不相关的子问题，封装起来。如：各种工具类</li>
+<li>将通用代码和项目专有代码分开</li>
+<li>一次只做一件事情</li>
+<li>用自然语言描述问题，理清思路，能写出更好懂的代码</li>
+<li>质疑和拆分你的需求，消除不必要的功能</li>
+<li>保持代码库的轻量级，删除无用代码，尽量使用库函数</li>
+</ol>
+<h2 id="第四部分-精选话题" class="headerLink">
+    <a href="#%e7%ac%ac%e5%9b%9b%e9%83%a8%e5%88%86-%e7%b2%be%e9%80%89%e8%af%9d%e9%a2%98" class="header-mark"></a>第四部分 精选话题</h2><ol>
+<li>测试代码的可读性与非测试代码的可读性同样重要</li>
+<li>对测试代码的使用者隐去不重要的细节，以便突出更重要的细节</li>
+<li>让错误信息具有更好的可读性</li>
+<li>又简单又能完成工作的测试值更好</li>
+<li>为测试函数起个好的名字。Test_类名_方法名_情形</li>
+<li>过犹不及：</li>
+<li>1）牺牲生产代码的可读性，只是为了方便测试</li>
+<li>2）顽固地追求100%的测试覆盖率</li>
+<li>3）让测试成为产品开发的主导和障碍</li>
+</ol>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2016-03-06</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.org/zh-cn/posts/tech/dev/readable-code/" data-title="编写可读代码的艺术"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/zh-cn/posts/tech/dev/readable-code/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.org/zh-cn/posts/tech/dev/readable-code/" data-title="编写可读代码的艺术"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Line" data-sharer="line" data-url="http://example.org/zh-cn/posts/tech/dev/readable-code/" data-title="编写可读代码的艺术"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/zh-cn/posts/tech/dev/readable-code/" data-title="编写可读代码的艺术"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zh-cn/posts/tech/dev/python-note1/" class="prev" rel="prev" title="Python学习笔记1"><i class="fas fa-angle-left fa-fw"></i>Python学习笔记1</a>
+            <a href="/zh-cn/posts/tech/dev/code-simplicity/" class="next" rel="next" title="简约之美：软件设计之道">简约之美：软件设计之道<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.110.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/zh-cn/" target="_blank" rel="noopener noreferrer"></a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"deamer2008/dreamer2008.github.io"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/zh-cn/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true};</script><script type="text/javascript" src="/js/utterances.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

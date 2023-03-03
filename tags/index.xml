@@ -3,28 +3,7 @@
         <title>Tags - Tag - Tom&#39;s Blog</title>
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - Tom&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>Python</title>
-    <link>http://example.org/tags/python/</link>
-    <pubDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/python/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>开发</title>
-    <link>http://example.org/tags/%E5%BC%80%E5%8F%91/</link>
-    <pubDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/%E5%BC%80%E5%8F%91/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>influence</title>
-    <link>http://example.org/tags/influence/</link>
-    <pubDate>Sun, 17 Jan 2016 17:42:22 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/influence/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
     <title>architecture</title>
     <link>http://example.org/tags/architecture/</link>
     <pubDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</pubDate><author>
@@ -39,39 +18,11 @@
     </author><guid>http://example.org/tags/ood/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>essay</title>
-    <link>http://example.org/tags/essay/</link>
-    <pubDate>Mon, 20 Apr 2015 00:05:00 &#43;0000</pubDate><author>
+    <title>misc</title>
+    <link>http://example.org/tags/misc/</link>
+    <pubDate>Sat, 18 Apr 2015 21:42:30 &#43;0000</pubDate><author>
         <name>Author</name>
-    </author><guid>http://example.org/tags/essay/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>git</title>
-    <link>http://example.org/tags/git/</link>
-    <pubDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/git/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>github</title>
-    <link>http://example.org/tags/github/</link>
-    <pubDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/github/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>hexo</title>
-    <link>http://example.org/tags/hexo/</link>
-    <pubDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/hexo/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>markdown</title>
-    <link>http://example.org/tags/markdown/</link>
-    <pubDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/markdown/</guid>
+    </author><guid>http://example.org/tags/misc/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

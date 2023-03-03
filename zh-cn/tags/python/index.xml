@@ -1,0 +1,28 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Python - 标签 - Tom&#39;s Blog</title>
+        <link>http://example.org/zh-cn/tags/python/</link>
+        <description>Python - 标签 - Tom&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-cn/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Python学习笔记3</title>
+    <link>http://example.org/zh-cn/posts/tech/dev/python-note3/</link>
+    <pubDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/dev/python-note3/</guid>
+    <description><![CDATA[面向对象 基本概念Python中的类提供了面向对象编程的所有基本功能：类的继承机制允许多个基类，派生类可以覆盖基类中的任何方法，方法中可以调用]]></description>
+</item><item>
+    <title>Python学习笔记2</title>
+    <link>http://example.org/zh-cn/posts/tech/dev/python-note2/</link>
+    <pubDate>Sun, 05 Jun 2016 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/dev/python-note2/</guid>
+    <description><![CDATA[函数函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段 参数传递 传不可变对象实例：在 python 中，strings, tuples, 和 numbers 是不可更改的对象]]></description>
+</item><item>
+    <title>Python学习笔记1</title>
+    <link>http://example.org/zh-cn/posts/tech/dev/python-note1/</link>
+    <pubDate>Sun, 17 Jan 2016 22:05:50 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/dev/python-note1/</guid>
+    <description><![CDATA[Python入门 Python简介脚本语言。解释语言。动态语言。默认的解释器CPython。 Python之父—荷兰人Guido van Rossum。]]></description>
+</item></channel>
+</rss>

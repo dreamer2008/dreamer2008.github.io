@@ -11,10 +11,7 @@
   <sitemap>
     <loc>http://example.org/zh-cn/sitemap.xml</loc>
     
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://example.org/fr/sitemap.xml</loc>
+      <lastmod>2017-01-17T22:05:50+00:00</lastmod>
     
   </sitemap>
   
