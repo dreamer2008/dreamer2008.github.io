@@ -3,7 +3,14 @@
         <title>所有文章 - Tom&#39;s Blog</title>
         <link>http://example.org/zh-cn/posts/</link>
         <description>所有文章 | Tom&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 19 Feb 2017 19:41:53 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>面向对象的设计原则</title>
+    <link>http://example.org/zh-cn/posts/tech/architecture/design-principles/</link>
+    <pubDate>Sun, 19 Feb 2017 19:41:53 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/architecture/design-principles/</guid>
+    <description><![CDATA[优秀的面向对象设计众所周知，软件=程序+文档+数据。通常来说，在一个软件系统的生命周期中，软件维护的时间&raquo;软件原始开发的时间。注]]></description>
+</item><item>
     <title>Python学习笔记3</title>
     <link>http://example.org/zh-cn/posts/tech/dev/python-note3/</link>
     <pubDate>Tue, 17 Jan 2017 22:05:50 &#43;0000</pubDate><author>
@@ -45,6 +52,13 @@
         <name>Tom</name>
     </author><guid>http://example.org/zh-cn/posts/influence/personal-brand/</guid>
     <description><![CDATA[摘要最近几年，“个人品牌”、“个人影响力”逐渐被人提及。然而他们真的那么重要吗？我们又应该如何打造呢？ 正文首先是一篇泼冷水的文章，发人深省，]]></description>
+</item><item>
+    <title>架构师之我见</title>
+    <link>http://example.org/zh-cn/posts/tech/architecture/my-view-on-architecture/</link>
+    <pubDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>http://example.org/zh-cn/posts/tech/architecture/my-view-on-architecture/</guid>
+    <description><![CDATA[什么是软件架构(Software Architecture) 定义 软件架构是有关软件整体结构与组件的抽象描述，用于指导大型软件系统各个方面的设计。（原文：(https:]]></description>
 </item><item>
     <title>做现实的理想主义者</title>
     <link>http://example.org/zh-cn/posts/essay/realistic-idealist/</link>

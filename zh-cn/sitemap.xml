@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/zh-cn/posts/</loc><lastmod>2017-01-17T22:05:50&#43;00:00</lastmod><xhtml:link
+            <loc>http://example.org/zh-cn/posts/</loc><lastmod>2017-02-19T19:41:53&#43;00:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.org/posts/"
@@ -11,6 +11,16 @@
                     hreflang="zh-cn"
                     href="http://example.org/zh-cn/posts/"
                     /></url><url>
+            <loc>http://example.org/zh-cn/</loc><lastmod>2017-02-19T19:41:53&#43;00:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.org/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.org/zh-cn/"
+                    /></url><url>
+            <loc>http://example.org/zh-cn/posts/tech/architecture/design-principles/</loc><lastmod>2017-02-19T19:41:53&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/tags/python/</loc><lastmod>2017-01-17T22:05:50&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/posts/tech/dev/python-note3/</loc><lastmod>2017-01-17T22:05:50&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/tags/</loc><lastmod>2017-01-17T22:05:50&#43;00:00</lastmod><xhtml:link
@@ -21,15 +31,6 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="http://example.org/zh-cn/tags/"
-                    /></url><url>
-            <loc>http://example.org/zh-cn/</loc><lastmod>2017-01-17T22:05:50&#43;00:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="http://example.org/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="http://example.org/zh-cn/"
                     /></url><url>
             <loc>http://example.org/zh-cn/tags/%E5%BC%80%E5%8F%91/</loc><lastmod>2017-01-17T22:05:50&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/posts/tech/dev/python-note2/</loc><lastmod>2016-06-05T22:05:50&#43;00:00</lastmod></url><url>
@@ -47,6 +48,9 @@
             <loc>http://example.org/zh-cn/posts/tech/dev/python-note1/</loc><lastmod>2016-01-17T22:05:50&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/tags/influence/</loc><lastmod>2016-01-17T17:42:22&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/posts/influence/personal-brand/</loc><lastmod>2016-01-17T17:42:22&#43;00:00</lastmod></url><url>
+            <loc>http://example.org/zh-cn/tags/architecture/</loc><lastmod>2016-01-17T09:41:19&#43;00:00</lastmod></url><url>
+            <loc>http://example.org/zh-cn/tags/ood/</loc><lastmod>2016-01-17T09:41:19&#43;00:00</lastmod></url><url>
+            <loc>http://example.org/zh-cn/posts/tech/architecture/my-view-on-architecture/</loc><lastmod>2016-01-17T09:41:19&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/tags/essay/</loc><lastmod>2015-04-20T00:05:00&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/posts/essay/realistic-idealist/</loc><lastmod>2015-04-20T00:05:00&#43;00:00</lastmod></url><url>
             <loc>http://example.org/zh-cn/tags/git/</loc><lastmod>2015-04-19T21:42:30&#43;00:00</lastmod></url><url>

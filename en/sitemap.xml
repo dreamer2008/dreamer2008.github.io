@@ -2,25 +2,6 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/posts/</loc><lastmod>2017-02-19T19:41:53&#43;00:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://example.org/zh-cn/posts/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://example.org/posts/"
-                    /></url><url>
-            <loc>http://example.org/</loc><lastmod>2017-02-19T19:41:53&#43;00:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://example.org/zh-cn/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://example.org/"
-                    /></url><url>
-            <loc>http://example.org/posts/tech/architecture/design-principles/</loc><lastmod>2017-02-19T19:41:53&#43;00:00</lastmod></url><url>
             <loc>http://example.org/reading/</loc><lastmod>2016-01-23T22:51:35&#43;00:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -30,18 +11,6 @@
                     hreflang="en"
                     href="http://example.org/reading/"
                     /></url><url>
-            <loc>http://example.org/tags/architecture/</loc><lastmod>2016-01-17T09:41:19&#43;00:00</lastmod></url><url>
-            <loc>http://example.org/tags/ood/</loc><lastmod>2016-01-17T09:41:19&#43;00:00</lastmod></url><url>
-            <loc>http://example.org/tags/</loc><lastmod>2016-01-17T09:41:19&#43;00:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://example.org/zh-cn/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://example.org/tags/"
-                    /></url><url>
-            <loc>http://example.org/posts/tech/architecture/my-view-on-architecture/</loc><lastmod>2016-01-17T09:41:19&#43;00:00</lastmod></url><url>
             <loc>http://example.org/about/</loc><lastmod>2023-03-03T21:10:08&#43;00:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -53,6 +22,33 @@
                     /></url><url>
             <loc>http://example.org/posts/misc/hello-world/</loc><lastmod>2015-04-18T21:42:30&#43;00:00</lastmod></url><url>
             <loc>http://example.org/tags/misc/</loc><lastmod>2015-04-18T21:42:30&#43;00:00</lastmod></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2015-04-18T21:42:30&#43;00:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.org/zh-cn/posts/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.org/posts/"
+                    /></url><url>
+            <loc>http://example.org/tags/</loc><lastmod>2015-04-18T21:42:30&#43;00:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.org/zh-cn/tags/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.org/tags/"
+                    /></url><url>
+            <loc>http://example.org/</loc><lastmod>2015-04-18T21:42:30&#43;00:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.org/zh-cn/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.org/"
+                    /></url><url>
             <loc>http://example.org/categories/</loc><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"

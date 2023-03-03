@@ -3,21 +3,7 @@
         <title>Tags - Tag - Tom&#39;s Blog</title>
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - Tom&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>architecture</title>
-    <link>http://example.org/tags/architecture/</link>
-    <pubDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/architecture/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>OOD</title>
-    <link>http://example.org/tags/ood/</link>
-    <pubDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://example.org/tags/ood/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 18 Apr 2015 21:42:30 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
     <title>misc</title>
     <link>http://example.org/tags/misc/</link>
     <pubDate>Sat, 18 Apr 2015 21:42:30 &#43;0000</pubDate><author>
