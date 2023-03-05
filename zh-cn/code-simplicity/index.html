@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>简约之美：软件设计之道 - Tom&#39;s Blog</title><meta name="Description" content="这是Tom的全新 Hugo 网站"><meta property="og:title" content="简约之美：软件设计之道" />
+<meta property="og:description" content="引子正如译者所言。在软件的生命周期中，往往维护成本&raquo;开发成本。而维护成本又会随着软件复杂度的降低而降低，所有，我们要尽量降低软件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dreamer2008.github.io/zh-cn/code-simplicity/" /><meta property="og:image" content="https://dreamer2008.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-05-07T20:08:19+00:00" />
+<meta property="article:modified_time" content="2016-05-07T20:08:19+00:00" /><meta property="og:site_name" content="Tom&#39;s Blog" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://dreamer2008.github.io/logo.png"/>
+
+<meta name="twitter:title" content="简约之美：软件设计之道"/>
+<meta name="twitter:description" content="引子正如译者所言。在软件的生命周期中，往往维护成本&raquo;开发成本。而维护成本又会随着软件复杂度的降低而降低，所有，我们要尽量降低软件"/>
+<meta name="application-name" content="DoIt">
+<meta name="apple-mobile-web-app-title" content="DoIt">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://dreamer2008.github.io/zh-cn/code-simplicity/" /><link rel="prev" href="https://dreamer2008.github.io/zh-cn/readable-code/" /><link rel="next" href="https://dreamer2008.github.io/zh-cn/python-note2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "简约之美：软件设计之道",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/dreamer2008.github.io\/zh-cn\/code-simplicity\/"
+        },"genre": "posts","wordcount":  1483 ,
+        "url": "https:\/\/dreamer2008.github.io\/zh-cn\/code-simplicity\/","datePublished": "2016-05-07T20:08:19+00:00","dateModified": "2016-05-07T20:08:19+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Tom"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/zh-cn/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/zh-cn/posts/"> 文章 </a><a class="menu-item" href="/zh-cn/tags/"> 标签 </a><a class="menu-item" href="/zh-cn/categories/"> 分类 </a><a class="menu-item" href="/zh-cn/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/code-simplicity/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/zh-cn/" title="Tom&#39;s Blog">Tom&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/zh-cn/posts/" title="">文章</a><a class="menu-item" href="/zh-cn/tags/" title="">标签</a><a class="menu-item" href="/zh-cn/categories/" title="">分类</a><a class="menu-item" href="/zh-cn/about/" title="">关于</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="#" onclick="return false;" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/zh-cn/code-simplicity/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">简约之美：软件设计之道</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/zh-cn/" title="Author" rel=" author" class="author">Tom</a>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-07">2016-05-07</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2016-05-07">2016-05-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1483 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p><a alt="简约之美：软件设计之道" href="http://item.jd.com/11151358.html" target="_blank"><img src="http://img13.360buyimg.com/n1/g8/M02/11/05/rBEHZ1DSycYIAAAAAAheBv036AcAADWtQHupY8ACF4e003.jpg"></a></p>
+<h1 id="引子" class="headerLink">
+    <a href="#%e5%bc%95%e5%ad%90" class="header-mark"></a>引子</h1><p>正如译者所言。在软件的生命周期中，往往维护成本&raquo;开发成本。而维护成本又会随着软件复杂度的降低而降低，所有，我们要尽量降低软件的复杂度。</p>
+<h1 id="内容简介" class="headerLink">
+    <a href="#%e5%86%85%e5%ae%b9%e7%ae%80%e4%bb%8b" class="header-mark"></a>内容简介</h1><blockquote>
+<p>优秀的软件设计简单明了。不过很遗憾，如今的计算机程序基本上都很复杂，恐怕无人能够确切知道所有代码都是怎么运转的。这本简明《简约之美：软件设计之道》旨在帮助读者利用科学规则掌握优秀设计的基础知识，《简约之美：软件设计之道》中给出的法则适用于所有编程语言和软件项目，并且永远有效。</p>
+</blockquote>
+<h1 id="笔记" class="headerLink">
+    <a href="#%e7%ac%94%e8%ae%b0" class="header-mark"></a>笔记</h1><ol>
+<li>好程序员和差程序员的区别在于<strong>理解能力</strong>。差劲的程序员不理解自己做的事情</li>
+<li>我们学习提高代码质量的全部原因在于，要想改进结果，提高代码质量是最重要的问题</li>
+<li>作者将软件设计视为一门科学。软件设计的科学就是为软件做计划、制定决策的科学，它帮助大家制定这类决定：
+1）程序的代码应当采用什么结构？
+2）是程序的速度重要，还是程序代码容易阅读重要？
+3）为满足需求，应该选择哪种编程语言？</li>
+<li>软件系统中任何与架构有关的技术决策，以及在开发系统中所做的技术决策，都可以归到“软件设计”的范畴里。</li>
+<li>每个写代码的人都是设计师</li>
+<li>一个人写出优秀软件的潜力，完全取决于他在多大程度上理解了“帮助其他人”的思想。在做与软件设计有关的决策时，指导法则就是判断能提供什么样的帮助（帮大忙、帮小忙，帮很多人、帮少数人）</li>
+<li>设计程序员能尽可能容易开发和维护的软件系统，这样的系统才能为用户提供尽可能多的帮助，而且能持续提供尽可能多的帮助。</li>
+<li>软件设计的方程式：D = V / E
+1）任何一点改变，其可取成都与其价值成正比，与所付出的成本成反比
+2）价值：包括可能价值和潜在价值
+3）成本：包括调研的时间+沟通的时间+思考的时间+编码的时间</li>
+<li>完整的方程式：  D = (Vn + Vf) / (Ei + Em)
+1）Vn：当前价值 Vf：未来价值 Ei：实现成本 Em：维护成本
+2）随着时间的发展，D -&gt; Vf / Em
+3）相比降低实现成本，降低维护成本更重要。在软件设计科学中，这点非常重要</li>
+<li>设计的质量好坏，正比于该系统在未来能持续帮助他人时间的长短</li>
+<li>变化定律：程序存在的时间越久，它的某个部分需要变化的可能性就越高</li>
+<li>软件设计的三大误区：
+1）编写不必要的代码
+不要编写非必需的代码，而且要删除没用的代码
+2）代码难以修改
+僵化设计（rigid design）有两大原因：对未来做太多假设，不仔细设计就编码。设计程序时，应当根据你现在确切知道的需求，而不是你认为未来会出现的需求
+3）过分追求通用</li>
+<li>避免以上三大误区：渐进设计和开发，小步快跑</li>
+<li>缺陷概率定律：在程序中新增缺陷的可能性与代码修改量成正比</li>
+<li>最好的设计，就是能适应外界尽可能多的变化，而软件自身的变化要尽可能少</li>
+<li>永远不要“修复”任何东西，除非它真的是问题，而且有证据表明它的存在</li>
+<li>理想情况下，任何系统里的任何信息，都应当只存在一次</li>
+<li>简洁定律：软件任何一部分的维护难度，正比于该部分的简洁程度</li>
+<li>简洁是相对的。简单到啥子都能看懂</li>
+<li>保持可读性、一致性，简单的设计</li>
+<li>除了新增功能，以下做法也会增加复杂性
+1）扩展软件用途
+2）新增程序员
+3）做无谓的改变
+4）困于糟糕的技术
+5）理解错误
+6）糟糕的设计或不做设计
+7）重新发明轮子</li>
+<li>复杂问题
+1）大多数麻烦的设计问题，都可以用在纸上画图或写出来的办法找到答案
+2）如果某个部分太复杂，就将其分解成小任务。。。分而治之
+3）可以在做新功能的时间做重新设计和简化</li>
+<li>推倒重来，需要同时满足以下条件
+1）已经完成了准确评估，证明重写比重构好
+2）有足够的时间
+3）设计水平要比原来高
+4）完全打算好了设计新系统，在每一步都有用户提供反馈
+5）有足够的资源，可兼顾维护老系统和开发新系统</li>
+<li>测试定律：你对软件行为的了解程度，等于你对它的测试程序</li>
+</ol>
+</div>
+
+        
+
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2016-05-07</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/zh-cn/code-simplicity/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zh-cn/readable-code/" class="prev" rel="prev" title="编写可读代码的艺术"><i class="fas fa-angle-left fa-fw"></i>编写可读代码的艺术</a>
+            <a href="/zh-cn/python-note2/" class="next" rel="next" title="Python学习笔记2">Python学习笔记2<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.110.0">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/zh-cn/" target="_blank" rel="noopener noreferrer">Tom</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"dreamer2008/dreamer2008.github.io"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/zh-cn/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"table":{"sort":true}};</script><script type="text/javascript" src="/js/utterances.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>
