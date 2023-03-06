@@ -161,15 +161,6 @@ Next time when you need to publish, you just run
 
 ## Other issues
 
-### Date Time format
-
-The strict/full format in Hugo is like below.
-
-``` bash
-YYYY-MM-DD HH:MM:SS +0800
-```
-The timezone detail *+0800* is not required, but sometimes you have to be very careful. e.g. A post is for en locale, the date in the West is March 5th while it's March 6th in your location already. If you specify the date as Marc 6th, your post would not be publish as expected(depends on the time).
-
-This means the datetime has to be consistent with the locale.
+TO BE UPDATED.
 
 

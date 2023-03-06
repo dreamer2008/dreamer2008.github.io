@@ -2,9 +2,10 @@
 
 
 ## 自我介绍
-  * 软件工程师，摄像爱好者。兼职[InfoQ社区编辑](https://www.infoq.cn/profile/AA1BDD107B4C41/publish/all)
-  * 从事行业：互联网/电子商务/软件（10年以上经验）
-  * 编程语言：Java(7年多)/JavaScript/Python
+  * 软件工程师（10年以上经验，其中包括7年多Java经验）
+  * 摄像爱好者。兼职[InfoQ社区编辑](https://www.infoq.cn/profile/AA1BDD107B4C41/publish/all)
+  * 从事行业：互联网/电子商务/软件
+  * 编程语言：Java/JavaScript。感兴趣：Python/Go
   * 人类/自然语言：中文:cn:/英语:uk:。感兴趣：法语:fr:，德语:de:，西班牙语:es:等
   * 技术方向：后端/服务器端开发。关注人工智能/AI
   * 兴趣爱好：旅行、摄影（Sony A7R III）、电影、骑车([北京夜骑](https://www.bilibili.com/video/BV1bp4y1a7oT/))、桌球等
