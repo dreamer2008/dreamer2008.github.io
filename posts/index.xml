@@ -4,7 +4,17 @@
         <link>https://dreamer2008.github.io/posts/</link>
         <description>All Posts | Tom&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dtstudy@gmail.com (Tom)</managingEditor>
-            <webMaster>dtstudy@gmail.com (Tom)</webMaster><lastBuildDate>Sat, 18 Apr 2015 21:42:30 &#43;0000</lastBuildDate><atom:link href="https://dreamer2008.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dtstudy@gmail.com (Tom)</webMaster><lastBuildDate>Mon, 06 Mar 2023 16:03:49 &#43;0800</lastBuildDate><atom:link href="https://dreamer2008.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Migration from Hexo to Hugo</title>
+    <link>https://dreamer2008.github.io/migration/</link>
+    <pubDate>Mon, 06 Mar 2023 16:03:49 &#43;0800</pubDate><author>
+        <name>Tom</name>
+    </author><guid>https://dreamer2008.github.io/migration/</guid>
+    <description><![CDATA[How this blog was createdIn 2015, I built this blog with Hexo and Theme Octo.
+Why I migrate to HugoHugo is written in Golang and it&rsquo;s much faster.
+How to migrate Installations Install Git and Go Install Hugo 1 brew install hugo Create a site 1 hugo new site blog Pick a themeThere are a bunch of Hugo Themes for you to pick. I picked the DoIt theme.
+Why I chose DoItThere are so many exciting features, like mobile-friendly, search, i18n, emoji.]]></description>
+</item><item>
     <title>Hello World</title>
     <link>https://dreamer2008.github.io/hello-world/</link>
     <pubDate>Sat, 18 Apr 2015 21:42:30 &#43;0000</pubDate><author>
