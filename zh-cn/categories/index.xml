@@ -1,7 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - 分类 - Tom&#39;s Blog</title>
-        <link>http://example.org/zh-cn/categories/</link>
+        <link>https://dreamer2008.github.io/zh-cn/categories/</link>
         <description>Categories - 分类 - Tom&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="http://example.org/zh-cn/categories/" rel="self" type="application/rss+xml" /></channel>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dtstudy@gmail.com (Tom)</managingEditor>
+            <webMaster>dtstudy@gmail.com (Tom)</webMaster><lastBuildDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</lastBuildDate><atom:link href="https://dreamer2008.github.io/zh-cn/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>branding</title>
+    <link>https://dreamer2008.github.io/zh-cn/categories/branding/</link>
+    <pubDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>https://dreamer2008.github.io/zh-cn/categories/branding/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

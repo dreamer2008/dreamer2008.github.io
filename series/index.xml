@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Series - Series - Tom&#39;s Blog</title>
+        <link>https://dreamer2008.github.io/series/</link>
+        <description>Series - Series - Tom&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dtstudy@gmail.com (Tom)</managingEditor>
+            <webMaster>dtstudy@gmail.com (Tom)</webMaster><atom:link href="https://dreamer2008.github.io/series/" rel="self" type="application/rss+xml" /></channel>
+</rss>

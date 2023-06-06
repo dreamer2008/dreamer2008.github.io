@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>OOD - 标签 - Tom&#39;s Blog</title>
-        <link>http://example.org/zh-cn/tags/ood/</link>
+        <link>https://dreamer2008.github.io/zh-cn/tags/ood/</link>
         <description>OOD - 标签 - Tom&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-cn/tags/ood/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dtstudy@gmail.com (Tom)</managingEditor>
+            <webMaster>dtstudy@gmail.com (Tom)</webMaster><lastBuildDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</lastBuildDate><atom:link href="https://dreamer2008.github.io/zh-cn/tags/ood/" rel="self" type="application/rss+xml" /><item>
     <title>架构师之我见</title>
-    <link>http://example.org/zh-cn/posts/tech/architecture/my-view-on-architecture/</link>
+    <link>https://dreamer2008.github.io/zh-cn/my-view-on-architecture/</link>
     <pubDate>Sun, 17 Jan 2016 09:41:19 &#43;0000</pubDate><author>
         <name>Tom</name>
-    </author><guid>http://example.org/zh-cn/posts/tech/architecture/my-view-on-architecture/</guid>
+    </author><guid>https://dreamer2008.github.io/zh-cn/my-view-on-architecture/</guid>
     <description><![CDATA[什么是软件架构(Software Architecture) 定义 软件架构是有关软件整体结构与组件的抽象描述，用于指导大型软件系统各个方面的设计。（原文：(https:]]></description>
 </item></channel>
 </rss>

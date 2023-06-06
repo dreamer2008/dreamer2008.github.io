@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>github - 标签 - Tom&#39;s Blog</title>
-        <link>http://example.org/zh-cn/tags/github/</link>
+        <link>https://dreamer2008.github.io/zh-cn/tags/github/</link>
         <description>github - 标签 - Tom&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-cn/tags/github/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dtstudy@gmail.com (Tom)</managingEditor>
+            <webMaster>dtstudy@gmail.com (Tom)</webMaster><lastBuildDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</lastBuildDate><atom:link href="https://dreamer2008.github.io/zh-cn/tags/github/" rel="self" type="application/rss+xml" /><item>
     <title>Github Blogging with Hexo</title>
-    <link>http://example.org/zh-cn/posts/influence/github-blogging-with-hexo/</link>
+    <link>https://dreamer2008.github.io/zh-cn/github-blogging-with-hexo/</link>
     <pubDate>Sun, 19 Apr 2015 21:42:30 &#43;0000</pubDate><author>
         <name>Tom</name>
-    </author><guid>http://example.org/zh-cn/posts/influence/github-blogging-with-hexo/</guid>
+    </author><guid>https://dreamer2008.github.io/zh-cn/github-blogging-with-hexo/</guid>
     <description><![CDATA[<p>现在github非常火，很多人（包括很多爱写作的非程序猿）都在上面开博了。推荐两篇文章：</p>
 <ul>
 <li>
