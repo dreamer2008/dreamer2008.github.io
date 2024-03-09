@@ -1,7 +1,7 @@
-# Why I want to relocate to Germany
+# Why I'm willing to relocate to Germany
 
 
-## Why I want to relocate to Germany
+## Why I'm willing to relocate to Germany
 
 Before the Covid-19 pandemic, like most Chinese people, I had never been to Germany or any other developed country. **I was just curious about Germany and fascinated by its industrial products and culture**, I had a travel plan that was disrupted by the pandemic. If you ask this question at this point, I would answer like below.
 
@@ -11,7 +11,7 @@ Before the Covid-19 pandemic, like most Chinese people, I had never been to Germ
 
 But now, after a six-month stay in Germany between August 2023 and January 2024, **I would add that I'm so sure that I like living in Germany and I'm willing to relocate.**
 
-### Working Style/Culture
+### Workplace Culture
 
 The working culture in the IT industry of Germany is so different from that in China. I have heard this before and confirmed this through the people I know. 
 
