@@ -1,7 +1,7 @@
 # Why I'm willing to relocate to Germany
 
 
-## Why I'm willing to relocate to Germany
+## Why I'm Willing to Relocate to Germany
 
 Before the COVID-19 pandemic, like most Chinese people, I had never visited Germany or any other European country. **I was simply curious about Germany,  captivated by its industrial products and culture**, I had a travel plan that was unfortunately disrupted by the pandemic. Before the pandemic, I would answer as follows.
 
