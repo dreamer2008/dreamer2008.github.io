@@ -9,8 +9,8 @@ I'm now ready to pursue my next adventure.
 
 ## My Expectations for My Next Job
 
-* Position: Full-time Java Developer position(Intermediate or Senior level)
+* Position: Full-time/Part-time Java/Full-stack Developer position(Intermediate or Senior level)
 * Location: Germany/Europe
 * Work Mode: Remote/Hybrid/On-site
-* Working language: English(I'm learning German, but not good enough for work)
-* Expected salary: ~75,000 EUR/year(gross). Negotiable.
+* Working language: English(I'm learning German)
+* Expected salary: ~70,000 EUR/year(gross). Negotiable.

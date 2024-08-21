@@ -4,25 +4,26 @@
         <link>https://dreamer2008.github.io/</link>
         <description>这是Tom的全新 Hugo 网站</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dtstudy@gmail.com (Tom)</managingEditor>
-            <webMaster>dtstudy@gmail.com (Tom)</webMaster><lastBuildDate>Mon, 11 Mar 2024 21:40:00 &#43;0000</lastBuildDate>
+            <webMaster>dtstudy@gmail.com (Tom)</webMaster><lastBuildDate>Tue, 20 Aug 2024 21:50:00 &#43;0000</lastBuildDate>
             <atom:link href="https://dreamer2008.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Why I&#39;m willing to relocate to Germany</title>
+    <link>https://dreamer2008.github.io/why-i-am-willing-to-germany/</link>
+    <pubDate>Tue, 20 Aug 2024 21:50:00 &#43;0000</pubDate><author>
+        <name>Tom</name>
+    </author><guid>https://dreamer2008.github.io/why-i-am-willing-to-germany/</guid>
+    <description><![CDATA[Two Major ReasonsBefore the COVID-19 pandemic, like most Chinese people, I had never visited Germany or any other European country. I was simply curious about Germany-its industrial products and culture, I had a travel plan that was unfortunately disrupted by the pandemic.
+So, why I&rsquo;m willing to relocate to Germany. There are two major reasons.
+For a sustainable career. WLB(work-life balance) is not as common in China as it is in Germany, I don&rsquo;t think the working style in China is sustainable for employees.]]></description>
+</item><item>
     <title>My Expectations for My Next Job</title>
     <link>https://dreamer2008.github.io/my-expectations-for-my-next-job/</link>
-    <pubDate>Mon, 11 Mar 2024 21:40:00 &#43;0000</pubDate><author>
+    <pubDate>Tue, 20 Aug 2024 21:40:00 &#43;0000</pubDate><author>
         <name>Tom</name>
     </author><guid>https://dreamer2008.github.io/my-expectations-for-my-next-job/</guid>
     <description><![CDATA[What I Went Through in the Past Two YearsMy grandmother passed away in January 2023 and I lost my father in February 2024. I spent a lot of time taking care of them before their passing and their loss deeply saddened me.
 I&rsquo;m now ready to pursue my next adventure.
-My Expectations for My Next Job Position: Full-time Java Developer position(Intermediate or Senior level) Location: Germany/Europe Work Mode: Remote/Hybrid/On-site Working language: English(I&rsquo;m learning German, but not good enough for work) Expected salary: ~75,000 EUR/year(gross).]]></description>
-</item><item>
-    <title>Why I&#39;m willing to relocate to Germany</title>
-    <link>https://dreamer2008.github.io/why-i-am-willing-to-germany/</link>
-    <pubDate>Thu, 07 Mar 2024 21:40:00 &#43;0000</pubDate><author>
-        <name>Tom</name>
-    </author><guid>https://dreamer2008.github.io/why-i-am-willing-to-germany/</guid>
-    <description><![CDATA[Why I&rsquo;m Willing to Relocate to GermanyBefore the COVID-19 pandemic, like most Chinese people, I had never visited Germany or any other European country. I was simply curious about Germany, captivated by its industrial products and culture, I had a travel plan that was unfortunately disrupted by the pandemic. Before the pandemic, I would answer as follows.
-For a sustainable career. WLB(work-life balance) is not as common in China as it is in Germany, I don&rsquo;t think it&rsquo;s a sustainable way in China.]]></description>
+My Expectations for My Next Job Position: Full-time/Part-time Java/Full-stack Developer position(Intermediate or Senior level) Location: Germany/Europe Work Mode: Remote/Hybrid/On-site Working language: English(I&rsquo;m learning German) Expected salary: ~70,000 EUR/year(gross).]]></description>
 </item><item>
     <title>Migration from Hexo to Hugo</title>
     <link>https://dreamer2008.github.io/migration/</link>
