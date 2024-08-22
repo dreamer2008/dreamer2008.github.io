@@ -11,7 +11,7 @@ So, why I'm willing to relocate to Germany? There are three major reasons.
 
 * For a sustainable career. WLB(work-life balance) is not as common in China as it is in Germany, I don't think the working style in China is sustainable for employees. 
 
-* For freedom. There is more freedom in Germany.
+* For freedom. There is more freedom in Germany and people have more access to the Internet and other countries.
 
 Also, after a five-month stay in Germany between August 2023 and January 2024, **I am pretty sure that I like living in Germany and I would love to relocate.**
 
@@ -97,11 +97,6 @@ Although Germany has no 24/7 convenience stores like 7-Eleven, I think the groce
 
 Although Berlin is the largest city in Germany in terms of population, it is a much smaller city than Beijing(BJ has a population of over 20 million). It is less crowded and more accessible no matter where you are in the city.
 
-### Connection to the World
-
-For some reasons, people in China don't have to access to some websites/apps/tools, like chatgpt.
-
-I want to be connected to the whole world.
 
 ## A Little Story
 One day when picking up my Too Good To Go surprise bag from a baker's shop, I encountered three little girls who failed to buy food because of budget problems. Upon receiving my surprise bag, I asked them to pick three pieces of bread they liked, and they thanked me. I was so glad that I could help.
