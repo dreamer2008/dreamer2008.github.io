@@ -1,17 +1,19 @@
 # Why I'm willing to relocate to Germany
 
 
-## Two Major Reasons
+## Three Major Reasons
 
-Before the COVID-19 pandemic, like most Chinese people, I had never visited Germany or any other European country. **I was simply curious about Germany-its industrial products and culture**, I had a travel plan that was unfortunately disrupted by the pandemic. 
+Before the COVID-19 pandemic, like most Chinese people, I had never visited Germany or any other European country. I had a travel plan that was unfortunately disrupted by the pandemic. 
 
-So, why I'm willing to relocate to Germany. There are two major reasons.
+So, why I'm willing to relocate to Germany? There are three major reasons.
 
-* **For a sustainable career**. WLB(work-life balance) is not as common in China as it is in Germany, I don't think the working style in China is sustainable for employees. 
+* Curiosity about German industrial products and culture. Germany is renowned for "Made in Germany" products, e.g. cars.
 
-* **For freedom**. There is more freedom in Germany.
+* For a sustainable career. WLB(work-life balance) is not as common in China as it is in Germany, I don't think the working style in China is sustainable for employees. 
 
-Also, after a five-month stay in Germany between August 2023 and January 2024, **I am confident to say that I like living in Germany and I would love to relocate.**
+* For freedom. There is more freedom in Germany.
+
+Also, after a five-month stay in Germany between August 2023 and January 2024, **I am pretty sure that I like living in Germany and I would love to relocate.**
 
 ### Workplace Culture
 
@@ -94,6 +96,12 @@ Although Germany has no 24/7 convenience stores like 7-Eleven, I think the groce
 ### Medium-sized City
 
 Although Berlin is the largest city in Germany in terms of population, it is a much smaller city than Beijing(BJ has a population of over 20 million). It is less crowded and more accessible no matter where you are in the city.
+
+### Connection to the World
+
+For some reasons, people in China don't have to access to some websites/apps/tools, like chatgpt.
+
+I want to be connected to the whole world.
 
 ## A Little Story
 One day when picking up my Too Good To Go surprise bag from a baker's shop, I encountered three little girls who failed to buy food because of budget problems. Upon receiving my surprise bag, I asked them to pick three pieces of bread they liked, and they thanked me. I was so glad that I could help.
