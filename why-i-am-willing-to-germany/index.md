@@ -9,7 +9,7 @@ So, why I'm willing to relocate to Germany? There are three major reasons.
 
 * Curiosity about German industrial products and culture. Germany is renowned for "Made in Germany" products, e.g. cars.
 
-* For a sustainable career. WLB(work-life balance) is not as common in China as it is in Germany, I don't think the working style in China is sustainable for employees. 
+* For a sustainable career. WLB(work-life balance) is not as common in China as it is in Germany, I don't think the working culture in China is sustainable for most employees. 
 
 * For freedom. There is more freedom in Germany and people have more access to the Internet and other countries.
 
