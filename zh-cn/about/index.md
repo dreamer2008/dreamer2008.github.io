@@ -2,7 +2,7 @@
 
 
 ## 自我介绍
-  * 软件工程师（7年Java开发经验）
+  * 软件工程师（8年Java开发经验）
   * 摄影爱好者。兼职[InfoQ社区编辑](https://www.infoq.cn/profile/AA1BDD107B4C41/publish/all)
   * 从事行业：互联网/软件/电子商务
   * 编程语言：Java/JavaScript。感兴趣：Python/Go

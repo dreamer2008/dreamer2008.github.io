@@ -2,7 +2,7 @@
 
 
 ## About
-  * Senior Software Engineer(7 years in Java)
+  * Senior Software Engineer(8 years in Java)
   * Part-time [Senior Community Editor @InfoQ](https://www.infoq.cn/profile/AA1BDD107B4C41/publish/all)
   * Industry: Internet/Software/E-commerce
   * One of my previous employers was [JD.COM](https://corporate.jd.com), which is one of the biggest Internet companies/online retailers in China 
