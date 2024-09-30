@@ -3,7 +3,7 @@
 
 ## What I Went Through in the Past Two Years
 
-My grandmother passed away in January 2023 and I lost my father in February 2024. I spent a lot of time taking care of them before their passing and their loss deeply saddened me.
+My grandmother passed away in January 2023 and I lost my father in February 2024. I spent a lot of time taking care of them and their passing deeply saddened me.
 
 I'm now ready to pursue my next adventure.
 
