@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://dreamer2008.github.io/posts/</loc><lastmod>2024-08-20T21:50:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://dreamer2008.github.io/posts/</loc><lastmod>2024-10-01T21:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://dreamer2008.github.io/zh-cn/posts/"
@@ -11,7 +11,7 @@
                     hreflang="en"
                     href="https://dreamer2008.github.io/posts/"
                     /></url><url>
-            <loc>https://dreamer2008.github.io/</loc><lastmod>2024-08-20T21:50:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://dreamer2008.github.io/</loc><lastmod>2024-10-01T21:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://dreamer2008.github.io/zh-cn/"
@@ -20,6 +20,7 @@
                     hreflang="en"
                     href="https://dreamer2008.github.io/"
                     /></url><url>
+            <loc>https://dreamer2008.github.io/what-skills-i-have-learned-and-gained/</loc><lastmod>2024-10-01T21:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dreamer2008.github.io/why-i-would-love-to-relocate-to-germany/</loc><lastmod>2024-08-20T21:50:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dreamer2008.github.io/my-expectations-for-my-next-job/</loc><lastmod>2024-08-20T21:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dreamer2008.github.io/tags/hugo/</loc><lastmod>2023-03-06T16:03:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

@@ -3,17 +3,25 @@
 
 ## Three Major Reasons
 
-Like most Chinese people, I had never visited Germany or any other European country before the COVID-19 pandemic. I had a travel plan that was unfortunately disrupted by the pandemic. 
+In late 2019, I had a Europe travel plan, but it was unfortunately disrupted by the COVID-19 pandemic. It was my first time to visit Germany/Europe in 2023.
 
-So, why am I would love to relocate to Germany? There are three major reasons.
 
-* Curiosity about German industrial products and culture. Germany is renowned for "Made in Germany" products, e.g. cars. I want to explore a different culture
+So, why would I love to relocate to Germany? There are three major reasons.
+
+* For curiosity. I'm so curious about German industrial products and culture. Germany is renowned for "Made in Germany" products, e.g. cars. Germany has also produced many philosophers, scientists, mathematicians, and musicians.
 
 * For a sustainable career. WLB(work-life balance) is rare in China. I don't think the working culture in China is sustainable for most employees. 
 
 * For freedom. There is more freedom in Germany and people have free access to the Internet and new technical products. All my friends in Germany believe their lives are better than those in China.
 
-Also, after a five-month stay in Germany between August 2023 and January 2024, **I am pretty sure that I like living in Germany and I would love to relocate.**
+Also, after a five-month stay in Germany. **I am confident that I like living in Germany and I would love to relocate.**
+
+## How I can relocate
+For an employer in Germany, the only paperwork is a form named [Erklärung zum Beschäftigungsverhältnis](https://www.arbeitsagentur.de/datei/erklaerung-zum-beschaeftigungsverhaeltnis_ba047549.pdf) if I get hired.  **I can handle all the rest process of the relocation.**
+
+I have exprience in JSV(Job Seeker Visa), Blue Card (work visa) process is very similar. And fortunately, the long-term German visa in China is digitalized and become much faster this year. It ONLY takes about 2 weeks.
+
+The following is my impression of Germany.
 
 ### Workplace Culture
 
@@ -101,7 +109,4 @@ Although Berlin is the largest city in Germany in terms of population, it is a m
 ## A Little Story
 One day when picking up my Too Good To Go surprise bag from a baker's shop, I encountered three little girls who failed to buy food because of budget problems. Upon receiving my surprise bag, I asked them to pick three pieces of bread they liked, and they thanked me. I was so glad that I could help.
 
-## How will I relocate
-For an employer in Germany, the only paperwork is a form named [Erklärung zum Beschäftigungsverhältnis](https://www.arbeitsagentur.de/datei/erklaerung-zum-beschaeftigungsverhaeltnis_ba047549.pdf) if I get hired.  **I can handle all the rest process of the relocation.**
 
-I have exprience in JSV(Job Seeker Visa), Blue Card visa is very similar. And fortunately, the long-term German visa in China is digitalized and become much faster this year. It ONLY takes about 2 weeks.
